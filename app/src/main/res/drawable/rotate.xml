@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rotate" android:oneshot="false">
+    <item android:drawable="@drawable/reload"
+        android:duration="100"
+        android:fromDegrees="360"/>
+
+</animation-list>

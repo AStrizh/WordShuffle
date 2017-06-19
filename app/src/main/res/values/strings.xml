@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Word Shuffle</string>
+    <string name="word">Word goes here</string>
+    <string name="definition">Description of the word goes down here
+        \nCan run down here
+        \nEven down here</string>
+    <string name="total">Total: 0</string>
+
+    <string name="skip">Skip</string>
+
+    <string name="standmes">Arrange the letters in the correct sequence</string>
+    <string name="skipped">The last word was </string>
+    <string name="correct">That\'s right! You got %d points</string>
+    <string name="incorrect">Sorry. That\'s not right, please try again.</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+</resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "900047291884",
+    "firebase_url": "https://wordshuffle-f6a89.firebaseio.com",
+    "project_id": "wordshuffle-f6a89",
+    "storage_bucket": "wordshuffle-f6a89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900047291884:android:074f69c9b8afd3ab",
+        "android_client_info": {
+          "package_name": "com.strizhevskiy.WordShuffle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900047291884-rsatc0en8qagjqr8f92bdaet062h66v6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtYfTfaMoJCtL8TAafr3MHycciEbxZvMg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
