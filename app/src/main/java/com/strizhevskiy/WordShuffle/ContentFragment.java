@@ -69,6 +69,9 @@ public class ContentFragment extends Fragment  {
     boolean firstLoad;
     int minDistance = 100;
 
+    String bannerAdID = "ca-app-pub-3940256099942544/6300978111";
+    String interstitialAdID = "ca-app-pub-3940256099942544/1033173712";
+
 
     //The primary method or "main" method of the application starts here
     @Override
@@ -101,7 +104,7 @@ public class ContentFragment extends Fragment  {
 
 
         mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId(interstitialAdID);
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
@@ -115,14 +118,15 @@ public class ContentFragment extends Fragment  {
         initializer();
 
 
-        AdView mAdView = (AdView) fragView.findViewById(R.id.adView);
+        AdView bannerAd = (AdView) fragView.findViewById(R.id.bannerAd);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        bannerAd.setAdUnitId(bannerAdID);
+        bannerAd.loadAd(adRequest);
 
 
         return(fragView);
     }
-// This is the end of the primary method
+    // This is the end of the primary method
 
 
 
@@ -439,11 +443,12 @@ public class ContentFragment extends Fragment  {
 
 
 
-
+// TODO: Check if the calculation methods can be moved without issues
 
 //------------------------------------------------------------------------------------------------//
 //----------------------Methods Below should be moved to a new Class------------------------------//
 
+    //TODO: Find out why both the WordShuffle class and Fragment have a shuffle method
     //A Kunth shuffle to mix the letters of the word around
     private static String[] shuffle (String word) {
 

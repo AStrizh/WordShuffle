@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
     private static int dictType;
     private Context context;
 
+    //TODO: Add the animated Word Shuffle splash screen sequence
+    //TODO: Make sure the animated sequence word placement adjusts to any screen type
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //TODO: Leave only one button for start until other game modes are available
 
     public void ButtonOnClick(View v) {
         switch (v.getId()) {

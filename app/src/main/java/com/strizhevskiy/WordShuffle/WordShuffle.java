@@ -18,6 +18,7 @@ public class WordShuffle {
     private static int listLength = 3000;
 
 
+
     public WordShuffle (int fileResource, Context context) throws IOException {
 
         myMap = new HashMap<>();
@@ -94,7 +95,7 @@ public class WordShuffle {
         return r.nextInt(listLength) + 1;
     }
 
-
+    //TODO: Find out why both the WordShuffle class and Fragment have a shuffle method
     private static String shuffle (String word) {
 
         StringBuilder builder = new StringBuilder();
