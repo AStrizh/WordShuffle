@@ -27,9 +27,8 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
 import java.io.IOException;
-import java.util.Random;
 
-
+import static com.strizhevskiy.WordShuffle.Calculations.*;
 
 
 public class ContentFragment extends Fragment  {
@@ -67,22 +66,20 @@ public class ContentFragment extends Fragment  {
     int viewSideLength;
     int paddingElement;
     boolean firstLoad;
-    int minDistance = 100;
 
-    String bannerAdID = "ca-app-pub-3940256099942544/6300978111";
-    String interstitialAdID = "ca-app-pub-3940256099942544/1033173712";
-
+    private static final int ANIMATION_DURATION = 300;
 
     //The primary method or "main" method of the application starts here
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater,
+                             ViewGroup container,
                              Bundle savedInstanceState) {
 
         fragView = inflater.inflate(R.layout.mainfrag, container, false);
         mainLayout = (RelativeLayout) fragView;
 
-
-        fileResource =((MainActivity)getActivity()).getDict();
+        //TODO: Try to only call getActivity once
+        fileResource = ((MainActivity)getActivity()).getDict();
         context = (getActivity()).getApplicationContext();
 
         //Gets the screen width so views could be built proportionally
@@ -126,8 +123,6 @@ public class ContentFragment extends Fragment  {
         return(fragView);
     }
     // This is the end of the primary method
-
-
 
 
 
@@ -309,7 +304,6 @@ public class ContentFragment extends Fragment  {
 
 
 
-
     //Checks if  user got the word right
     private void checkText() {
 
@@ -345,7 +339,6 @@ public class ContentFragment extends Fragment  {
             taskBuilder();
 
         }
-
     }
 
     //Controls all the motion for the views
@@ -366,8 +359,9 @@ public class ContentFragment extends Fragment  {
                 Also used to send a letter back to its start position when overlap occurs.
                  */
                 if(firstLoad){
-                    generateViewPositions();
-                    generateTargetCenters();
+
+                    viewStartPositions = generateViewPositions( myTextViews );
+                    holeCenters = generateTargetCenters( myImageViews );
                     firstLoad = false;
                 }
 
@@ -394,12 +388,13 @@ public class ContentFragment extends Fragment  {
                         When finger lifted the System checks if the center of the view is close to
                         any of the targets. If it is the view snaps to the target
                          */
+                        //TODO: See if this entire section can be moved to Calculations class
                         PointF currentCenter = getCenter(view);
 
                         int i=0;
                         for (PointF targetCenter : holeCenters) {
 
-                            if ( distanceClose(currentCenter, targetCenter) ) {
+                            if ( distanceClose( currentCenter, targetCenter) ) {
                                 view.setX((int)( targetCenter.x - (view.getWidth()/2) ) );
                                 view.setY((int)( targetCenter.y - (view.getHeight()/2)) );
 
@@ -448,49 +443,21 @@ public class ContentFragment extends Fragment  {
 //------------------------------------------------------------------------------------------------//
 //----------------------Methods Below should be moved to a new Class------------------------------//
 
-    //TODO: Find out why both the WordShuffle class and Fragment have a shuffle method
-    //A Kunth shuffle to mix the letters of the word around
-    private static String[] shuffle (String word) {
-
-        Random gen = new Random();
-
-        //Gets rid of an extra empty element resulting from the split method
-        //NOTE: May need to be changed in Android N! (When Android upgrades to Java 8)
-        String[] mockLetters = word.split("");
-        int n = word.length();
-        String[] letters = new String[n];
-        System.arraycopy(mockLetters,1,letters,0,n);
-
-        while (n > 1) {
-            int k = gen.nextInt(n--);
-            String temp = letters[n];
-            letters[n] = letters[k];
-            letters[k] = temp;
-        }
-
-        return letters;
-    }
-
-
-
-
-
     //This method checks for overlap if two views are in the same target.
-    //This is if you put one letter on top of another letter which is already in a target spot
+    //That is, if you put one letter on top of another letter which is already in a target spot
     private void overlap(View view){
-
 
         for(int j = 0; j<wordLength;j++) {
 
-            if(  getCenter(myTextViews[j]).equals(getCenter(view)) &&
-                    myTextViews[j] != view){
+            if( getCenter(myTextViews[j]).equals( getCenter(view)) &&  myTextViews[j] != view){
 
 
                 //The code below animates the movement of the tiles to their start position
-                TranslateAnimation animation = new TranslateAnimation((int)myTextViews[j].getX()-(int)viewStartPositions[j].x,
-                        0, (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
+                TranslateAnimation animation = new TranslateAnimation(
+                        (int)myTextViews[j].getX()-(int)viewStartPositions[j].x, 0,
+                        (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
 
-                animation.setDuration(300);
+                animation.setDuration(ANIMATION_DURATION);
                 myTextViews[j].startAnimation(animation);
 
                 myTextViews[j].setX((int)( viewStartPositions[j].x ) );
@@ -507,10 +474,11 @@ public class ContentFragment extends Fragment  {
         for(int j = 0; j<wordLength;j++) {
 
             //The code below animates the movement of the tiles to their start position
-            animation = new TranslateAnimation((int)myTextViews[j].getX()-(int)viewStartPositions[j].x,
-                    0, (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
+            animation = new TranslateAnimation(
+                    (int)myTextViews[j].getX()-(int)viewStartPositions[j].x, 0,
+                    (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
 
-            animation.setDuration(300);
+            animation.setDuration(ANIMATION_DURATION);
             myTextViews[j].startAnimation(animation);
 
             myTextViews[j].setX((int)( viewStartPositions[j].x ) );
@@ -518,74 +486,5 @@ public class ContentFragment extends Fragment  {
         }
 
     }
-
-
-
-    //Checks if a textView is close (within a minimum acceptable distance) to a target
-    private boolean distanceClose(PointF curCent , PointF tarCent) {
-
-        // Euclidean distance between two points
-        double distance = Math.sqrt(Math.pow(curCent.x - tarCent.x, 2)
-                + Math.pow(curCent.y - tarCent.y, 2));
-
-        return (distance <= minDistance);
-    }
-
-
-
-
-
-    //Stores the centers of the target views to use for positioning checks
-    private boolean generateTargetCenters() {
-
-        int n = myImageViews.length;
-        PointF centerTarget;
-
-        for (int i = 0; i<n; i++) {
-
-            centerTarget = getCenter( myImageViews[i] );
-            holeCenters[i] = centerTarget;
-        }
-
-        return true;
-    }
-
-
-
-
-
-    //Stores the start positions of the textViews to use to send back a view when overlap occurs
-    private boolean generateViewPositions() {
-
-        int n = myTextViews.length;
-        float startX;
-        float startY;
-
-        for (int i = 0; i<n; i++) {
-
-            startX = myTextViews[i].getX();
-            startY = myTextViews[i].getY();
-            viewStartPositions[i] = new PointF(startX, startY);
-        }
-
-        return true;
-    }
-
-
-
-
-    //Calculates the center of a view
-    private PointF getCenter( View v ){
-
-        float centreX =  v.getX() + v.getWidth() / 2;
-        float centreY =  v.getY() + v.getHeight() / 2;
-
-        return new PointF(centreX, centreY);
-    }
-
-//------------------------------------------------------------------------------------------------//
-
-
-
 
 }

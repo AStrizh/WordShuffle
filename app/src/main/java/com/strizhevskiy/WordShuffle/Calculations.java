@@ -1,20 +1,28 @@
 package com.strizhevskiy.WordShuffle;
 
+import android.graphics.PointF;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.Random;
+
 /**
  * Created by abstr on 12/23/2016.
  */
 
-public class Calculations {
+class Calculations {
+
+    private static final int MINDISTANCE = 100;
 
 
-
-/*
 
 //A Kunth shuffle to mix the letters of the word around
-    private static String[] shuffle (String word) {
+    static String[] shuffle (String word) {
 
         Random gen = new Random();
 
+        //TODO: Change to char to String cast rather than array copy
         //Gets rid of an extra empty element resulting from the split method
         //NOTE: May need to be changed in Android N! (When Android upgrades to Java 8)
         String[] mockLetters = word.split("");
@@ -33,12 +41,58 @@ public class Calculations {
     }
 
 
+    //Checks if a textView is close (within a minimum acceptable distance) to a target
+    static boolean distanceClose(PointF curCent , PointF tarCent) {
 
+        // Euclidean distance between two points
+        double distance = Math.sqrt(Math.pow(curCent.x - tarCent.x, 2)
+                + Math.pow(curCent.y - tarCent.y, 2));
+
+        return (distance <= MINDISTANCE);
+    }
+
+
+    //Stores the centers of the target views to use for positioning checks
+    static PointF[] generateTargetCenters( ImageView[] views ) {
+
+        int n = views.length;
+        PointF centerTarget;
+        PointF[] tempCenters = new PointF[n];
+
+        for (int i = 0; i<n; i++) {
+
+            centerTarget = getCenter( views[i] );
+            tempCenters[i] = centerTarget;
+        }
+        return tempCenters;
+    }
+
+
+    //Stores the start positions of the textViews to use to send back a view when overlap occurs
+    static PointF[] generateViewPositions( TextView[] views ) {
+
+        int n = views.length;
+        PointF[] tempPositions = new PointF[n];
+
+        float startX;
+        float startY;
+
+        for (int i = 0; i<n; i++) {
+
+            startX = views[i].getX();
+            startY = views[i].getY();
+            tempPositions[i] = new PointF(startX, startY);
+        }
+
+        return tempPositions;
+    }
+
+/*
 
 
 //This method checks for overlap if two views are in the same target.
 //This is if you put one letter on top of another letter which is already in a target spot
-    private void overlap(View view){
+    static void overlap(View view){
 
         for(int j = 0; j<wordLength;j++) {
 
@@ -53,43 +107,8 @@ public class Calculations {
 
 
 
-
-
-    //Checks if a textView is close (within a minimum acceptable distance) to a target
-    private boolean distanceClose(PointF curCent , PointF tarCent) {
-
-        // Euclidean distance between two points
-        double distance = Math.sqrt(Math.pow(curCent.x - tarCent.x, 2)
-                + Math.pow(curCent.y - tarCent.y, 2));
-
-        return (distance <= minDistance);
-    }
-
-
-
-
-
-//Stores the centers of the target views to use for positioning checks
-    private boolean generateTargetCenters() {
-
-        int n = myImageViews.length;
-        PointF centerTarget;
-
-        for (int i = 0; i<n; i++) {
-
-            centerTarget = getCenter( myImageViews[i] );
-            holeCenters[i] = centerTarget;
-        }
-
-        return true;
-    }
-
-
-
-
-
 //Stores the start positions of the textViews to use to send back a view when overlap occurs
-    private boolean generateViewPositions() {
+    static boolean generateViewPositions() {
 
         int n = myTextViews.length;
         float startX;
@@ -106,27 +125,16 @@ public class Calculations {
     }
 
 
+*/
 
-
-//Calculates the center of a view
-    private PointF getCenter( View v){
+    //Calculates the center of a view
+    static PointF getCenter(View v){
 
         float centreX =  v.getX() + v.getWidth() / 2;
         float centreY =  v.getY() + v.getHeight() / 2;
 
         return new PointF(centreX, centreY);
     }
-
-
-
-
-
-
-
-
-
-
-*/
 
 
 }
