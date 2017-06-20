@@ -45,7 +45,7 @@ public class WordShuffle {
         String[] words = sentence.split(" ");
 
         String orgWord = words[0];
-        String shuffled = shuffle(words[0]);
+        //String shuffled = shuffle(words[0]);
         String rank = words[1];
 
         words[0] = "";
@@ -57,6 +57,7 @@ public class WordShuffle {
 
         for( char c : ( sb.toString().toCharArray() ) ) {
 
+            //TODO: Find out what this commented block is for
             /*
             if( Character.isDigit(c) && Character.getNumericValue (c) > 3  ) {
                 break;
@@ -80,9 +81,8 @@ public class WordShuffle {
         String[] trimmed = new String[4];
 
         trimmed[0] = orgWord;
-        trimmed[1] = shuffled;
-        trimmed[2] = rank;
-        trimmed[3] = kb.toString().trim();
+        trimmed[1] = rank;
+        trimmed[2] = kb.toString().trim();
 
         return trimmed;
 
@@ -93,30 +93,6 @@ public class WordShuffle {
 
         Random r = new Random();
         return r.nextInt(listLength) + 1;
-    }
-
-    //TODO: Find out why both the WordShuffle class and Fragment have a shuffle method
-    private static String shuffle (String word) {
-
-        StringBuilder builder = new StringBuilder();
-        Random gen = new Random();
-
-        String[] letters = word.split("");
-        int n = letters.length;
-
-        while (n > 1) {
-            int k = gen.nextInt(n--); //decrements after using the value
-            String temp = letters[n];
-            letters[n] = letters[k];
-            letters[k] = temp;
-        }
-
-        for(String s : letters) {
-            builder.append(s);
-        }
-
-        return builder.toString();
-
     }
 
 

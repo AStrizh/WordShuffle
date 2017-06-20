@@ -13,5 +13,6 @@
     <string name="correct">That\'s right! You got %d points</string>
     <string name="incorrect">Sorry. That\'s not right, please try again.</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
 </resources>

@@ -104,7 +104,7 @@ public class ContentFragment extends Fragment  {
 
 
         mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId(interstitialAdID);
+        mInterstitialAd.setAdUnitId( getString(R.string.interstitial_ad_unit_id));
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
@@ -120,7 +120,6 @@ public class ContentFragment extends Fragment  {
 
         AdView bannerAd = (AdView) fragView.findViewById(R.id.bannerAd);
         AdRequest adRequest = new AdRequest.Builder().build();
-        bannerAd.setAdUnitId(bannerAdID);
         bannerAd.loadAd(adRequest);
 
 
@@ -139,6 +138,7 @@ public class ContentFragment extends Fragment  {
         wordWorking = word;
         Drawable box = ContextCompat.getDrawable(context, R.drawable.box);
 
+        //TODO: Replace with method in Word Shuffle class
         String[] letters = shuffle(wordWorking);
         wordLength = letters.length;
         int leftMarginView;
@@ -267,7 +267,7 @@ public class ContentFragment extends Fragment  {
         wordBuilder(words[0]);
         targetBuilder();
 
-        hint.setText(words[3]);
+        hint.setText(words[2]);
 
 
         resetBtn.setOnClickListener(new View.OnClickListener() {
@@ -327,9 +327,9 @@ public class ContentFragment extends Fragment  {
                 letterCollection[j] = " ";
             }
 
-
+            //TODO: Make a better points system (Kamaran's method)
             points = ( Integer.parseInt(
-                    words[2]) * words[0].length() ) - (points % 100);
+                    words[1]) * words[0].length() ) - (points % 100);
 
             total += points;
 
@@ -575,7 +575,7 @@ public class ContentFragment extends Fragment  {
 
 
     //Calculates the center of a view
-    private PointF getCenter( View v){
+    private PointF getCenter( View v ){
 
         float centreX =  v.getX() + v.getWidth() / 2;
         float centreY =  v.getY() + v.getHeight() / 2;

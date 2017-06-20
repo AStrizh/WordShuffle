@@ -8,8 +8,8 @@ android {
         applicationId "com.strizhevskiy.WordShuffle"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 10
-        versionName "0.10.10"
+        versionCode 12
+        versionName "0.10.12"
     }
     buildTypes {
         release {
