@@ -32,18 +32,19 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.fragloader);
                 break;
 
-            case R.id.medium:
-                dictType = R.raw.dictionary_easy;
-                setContentView(R.layout.fragloader);
-                break;
-            case R.id.hard:
-                dictType = R.raw.dictionary_easy;
-                setContentView(R.layout.fragloader);
-                break;
+            //Commented until more dictionaries available
+//            case R.id.medium:
+//                dictType = R.raw.dictionary_easy;
+//                setContentView(R.layout.fragloader);
+//                break;
+//            case R.id.hard:
+//                dictType = R.raw.dictionary_easy;
+//                setContentView(R.layout.fragloader);
+//                break;
         }
     }
 
-    public int getDict() {
+    int getDict() {
         return dictType;
     }
 

@@ -25,13 +25,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Easy"
+        android:text="Start"
         android:id="@+id/easy"
-        android:layout_marginTop="96dp"
-        android:layout_below="@+id/name"
-        android:layout_centerHorizontal="true"
-        android:onClick="ButtonOnClick" />
+        android:onClick="ButtonOnClick"
+        android:layout_marginBottom="119dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
+    <!--
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,5 +52,5 @@
         android:layout_alignStart="@+id/medium"
         android:layout_marginTop="80dp"
         android:onClick="ButtonOnClick"/>
-
+    -->
 </RelativeLayout>

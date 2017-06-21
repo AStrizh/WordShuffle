@@ -70,7 +70,7 @@ public class ContentFragment extends Fragment  {
 
     private static final int ANIMATION_DURATION = 300;
 
-    //The primary method or "main" method of the application starts here
+    //TODO: Back button should send user back to splash screen (MainActivity)
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
@@ -79,7 +79,6 @@ public class ContentFragment extends Fragment  {
         fragView = inflater.inflate(R.layout.mainfrag, container, false);
         mainLayout = (RelativeLayout) fragView;
 
-        //TODO: Try to only call getActivity once
         fileResource = ((MainActivity)getActivity()).getDict();
         context = (getActivity()).getApplicationContext();
 
@@ -438,16 +437,13 @@ public class ContentFragment extends Fragment  {
     }
 
 
-    //This method checks for overlap if two views are in the same target.
-    //That is, if you put one letter on top of another letter which is already in a target spot
+   //Checks overlap between tiles. If true moves background tile to start position
     private void overlap(View view){
 
         for(int j = 0; j<wordLength;j++) {
 
             if( getCenter(myTextViews[j]).equals( getCenter(view)) &&  myTextViews[j] != view){
 
-
-                //The code below animates the movement of the tiles to their start position
                 TranslateAnimation animation = new TranslateAnimation(
                         (int)myTextViews[j].getX()-(int)viewStartPositions[j].x, 0,
                         (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
@@ -461,14 +457,14 @@ public class ContentFragment extends Fragment  {
         }
     }
 
-
+    //Animates the movement of tiles to their start position
     private void reset(){
 
         TranslateAnimation animation;
 
         for(int j = 0; j<wordLength;j++) {
 
-            //The code below animates the movement of the tiles to their start position
+
             animation = new TranslateAnimation(
                     (int)myTextViews[j].getX()-(int)viewStartPositions[j].x, 0,
                     (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
