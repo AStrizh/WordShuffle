@@ -10,11 +10,11 @@ import java.util.Random;
 
 class Calculations {
 
-    private static final int MINDISTANCE = 100;
+    private static final int MIN_DISTANCE = 100;
 
 
     //Kunth shuffle to mix the letters of the word around
-    static String[] shuffle (String word) {
+    static String[] shuffle ( String word ) {
 
         Random gen = new Random();
 
@@ -31,7 +31,7 @@ class Calculations {
     }
 
     //Kunth shuffle to mix and array of points
-    static PointF[] shuffle (PointF[] positions) {
+    static PointF[] shuffle ( PointF[] positions ) {
 
         Random gen = new Random();
 
@@ -49,13 +49,13 @@ class Calculations {
     }
 
     //Checks if a textView is close (within a minimum acceptable distance) to a target
-    static boolean distanceClose(PointF curCent , PointF tarCent) {
+    static boolean distanceClose( PointF curCent, PointF tarCent ) {
 
         // Euclidean distance between two points
         double distance = Math.sqrt(Math.pow(curCent.x - tarCent.x, 2)
                 + Math.pow(curCent.y - tarCent.y, 2));
 
-        return (distance <= MINDISTANCE);
+        return (distance <= MIN_DISTANCE);
     }
 
 
@@ -93,7 +93,6 @@ class Calculations {
 
         return tempPositions;
     }
-
 
 
     //Calculates the center of a view

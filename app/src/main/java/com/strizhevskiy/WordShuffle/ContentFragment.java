@@ -34,21 +34,19 @@ import static com.strizhevskiy.WordShuffle.Calculations.*;
 
 public class ContentFragment extends Fragment  {
 
-    int fileResource;
-    String[] words;
+    private String[] words;
     private Context context;
     private View fragView;
-    InterstitialAd mInterstitialAd;
+    private InterstitialAd mInterstitialAd;
 
-    WordShuffle ws;
-    TextView hint;
-    TextView score;
-    TextView message;
-    Button skip;
-    Button resetBtn;
+    private WordShuffle ws;
+    private TextView hint;
+    private TextView score;
+    private TextView message;
+    private Button resetBtn;
 
-    int points;
-    int total;
+    private int points;
+    private int total;
 
     private ViewGroup mainLayout;
     private PointF[] holeCenters;
@@ -56,15 +54,14 @@ public class ContentFragment extends Fragment  {
     private ImageView[] myImageViews;
     private TextView[] myTextViews;
     private String[] letterCollection;
-    private int wordLength;
     private String wordWorking;
 
-    DisplayMetrics metrics;
-    int widthScreen;
-    int indentElement;
-    int viewSideLength;
-    int paddingElement;
-    boolean firstLoad;
+    private int widthScreen;
+    private int indentElement;
+    private int viewSideLength;
+    private boolean firstLoad;
+    private int letterCount;
+    private int wordLength;
 
     private static final int ANIMATION_DURATION = 300;
 
@@ -77,11 +74,11 @@ public class ContentFragment extends Fragment  {
         fragView = inflater.inflate(R.layout.mainfrag, container, false);
         mainLayout = (RelativeLayout) fragView;
 
-        fileResource = ((MainActivity)getActivity()).getDict();
+        int fileResource = ((MainActivity)getActivity()).getDict();
         context = (getActivity()).getApplicationContext();
 
         //Gets the screen width so views could be built proportionally
-        metrics = new DisplayMetrics();
+        DisplayMetrics metrics = new DisplayMetrics();
 
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
         widthScreen = metrics.widthPixels;
@@ -189,18 +186,15 @@ public class ContentFragment extends Fragment  {
 
         for (int i = 0; i < wordLength; i++) {
 
-            // create a new textview
             final ImageView holeView = new ImageView(context);
             holeView.setImageDrawable(hole);
 
 
-            RelativeLayout.LayoutParams imageParam =
-                    new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+            RelativeLayout.LayoutParams imageParam = new RelativeLayout.LayoutParams(
+                            RelativeLayout.LayoutParams.WRAP_CONTENT,
                             RelativeLayout.LayoutParams.WRAP_CONTENT);
 
-
-
-            paddingElement = indentElement/(wordLength + 1);
+            int paddingElement = indentElement/(wordLength + 1);
             viewSideLength = (widthScreen - indentElement) / wordLength;
 
             leftMarginImage = viewSideLength*i + paddingElement*(i+1);
@@ -225,7 +219,7 @@ public class ContentFragment extends Fragment  {
     //Set the parameters for the first game
     private void initializer(){
 
-        skip = (Button)fragView.findViewById(R.id.skip);
+        Button skip = (Button)fragView.findViewById(R.id.skip);
         skip.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (mInterstitialAd.isLoaded()) {
@@ -262,8 +256,9 @@ public class ContentFragment extends Fragment  {
         resetBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                RotateAnimation rotateAnimation = new RotateAnimation(0, 360,
-                        Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                RotateAnimation rotateAnimation = new RotateAnimation(
+                        0,360,Animation.RELATIVE_TO_SELF,
+                        0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
                 rotateAnimation.setDuration(500);
                 resetBtn.startAnimation(rotateAnimation);
@@ -284,6 +279,7 @@ public class ContentFragment extends Fragment  {
     private void skip(){
 
         message.setText(getString(R.string.skipped) + " " + words[0]);
+        letterCount = 0;
 
         //This pair removes the all word blocks
         for(View v : myTextViews)
@@ -306,10 +302,12 @@ public class ContentFragment extends Fragment  {
             for (int j = 0; j < wordLength; j++) {
                 letterCollection[j] = " ";
             }
+            letterCount = 0;
+            Log.v("letterCount lowered", String.valueOf(letterCount));
 
             //TODO: Make a better points system (Kamaran's method)
             points = ( Integer.parseInt(
-                    words[1]) * words[0].length() ) - (points % 100);
+                    words[1]) * wordLength ) - (points % 100);
 
             total += points;
 
@@ -373,8 +371,11 @@ public class ContentFragment extends Fragment  {
 
                         int k=0;
                         for (PointF targetCenter : holeCenters) {
-                            if( distanceClose(thisCenter, targetCenter))
+                            if( distanceClose(thisCenter, targetCenter)) {
                                 letterCollection[k] = " ";
+                                letterCount--;
+                                Log.v("letterCount lowered", String.valueOf(letterCount));
+                            }
                             k++;
                         }
                         break;
@@ -391,6 +392,8 @@ public class ContentFragment extends Fragment  {
 
                                 //Puts the letter from the view into an array for checking later
                                 letterCollection[i] = ( (TextView) view).getText().toString();
+                                letterCount++;
+                                Log.v("letterCount raised", String.valueOf(letterCount));
 
                                 //Checks if the view now overlaps another
                                 overlap(view);
@@ -399,7 +402,11 @@ public class ContentFragment extends Fragment  {
                             }
                             i++;
                         }
-                        checkText();
+                        if (letterCount == wordLength) {
+                            Log.v("CheckText called", String.valueOf(letterCount));
+                            checkText();
+
+                        }
                         break;
 
                     default:
@@ -429,6 +436,8 @@ public class ContentFragment extends Fragment  {
 
             if( getCenter(myTextViews[j]).equals( getCenter(view)) &&  myTextViews[j] != view){
 
+                letterCount--;
+                Log.v("letterCount lowered", String.valueOf(letterCount));
                 TranslateAnimation animation = new TranslateAnimation(
                         (int)myTextViews[j].getX()-(int)viewStartPositions[j].x, 0,
                         (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);

@@ -17,11 +17,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.Random;
-
 import static com.strizhevskiy.WordShuffle.Calculations.*;
 
-//import static com.strizhevskiy.WordShuffle.Calculations.shuffle;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -63,9 +60,7 @@ public class MainActivity extends AppCompatActivity {
         String wordWorking = "WORDSHUFFLE";
         wordLength = wordWorking.length();
 
-        String[] letters = breakString(wordWorking); //new String[wordLength];
-//        String[] mockLetters = wordWorking.split("");
-//        System.arraycopy(mockLetters,1,letters,0,wordLength);
+        String[] letters = breakString(wordWorking);
 
         myTextViews = new TextView[wordLength];
         viewStartPositions = new PointF[wordLength];
@@ -110,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
             rowTextView.setText(letters[i]);
 
             rowTextView.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            rowTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+            rowTextView.setTextSize(
+                    TypedValue.COMPLEX_UNIT_PX,
                     getResources().getDimension(R.dimen.size));
 
             rowTextView.setGravity(Gravity.CENTER);
