@@ -114,5 +114,14 @@ class Calculations {
         return letters;
     }
 
+    //Checks if letters are arranged correctly
+    static boolean correctAnswer( String[] letters, String word ){
+
+        for (int i = 0; i<word.length(); i++)
+            if ( letters[i].charAt(0) != word.charAt(i) )
+                return false;
+
+        return true;
+    }
 
 }

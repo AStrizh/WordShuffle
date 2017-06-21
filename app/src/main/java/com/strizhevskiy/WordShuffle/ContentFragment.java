@@ -172,7 +172,6 @@ public class ContentFragment extends Fragment  {
             rowTextView.setLayoutParams(viewParam);
             rowTextView.setOnTouchListener(onTouchListener());
 
-
             myTextViews[i] = rowTextView;
 
         }
@@ -302,14 +301,7 @@ public class ContentFragment extends Fragment  {
     //Checks if  user got the word right
     private void checkText() {
 
-        //TODO: Change check to use chatAt on wordWorking rather than a StringBuilder on letterCollection
-        //Checks if letters are arranged correctly
-        StringBuilder mySBuilder = new StringBuilder();
-        for (String letter : letterCollection) {
-            mySBuilder.append(letter);
-        }
-
-        if ( mySBuilder.toString().equals(wordWorking) ){
+        if ( correctAnswer(letterCollection, wordWorking) ){
 
             for (int j = 0; j < wordLength; j++) {
                 letterCollection[j] = " ";
@@ -376,13 +368,13 @@ public class ContentFragment extends Fragment  {
                         DownPT.y = event.getY();
                         StartPT = new PointF(view.getX(), view.getY());
 
-                        //Checks if a view is being moved out of a target, clears that letter
+                        //Checks if a view is being moved out of a target; clears that letter
                         PointF thisCenter = getCenter(view);
 
                         int k=0;
                         for (PointF targetCenter : holeCenters) {
                             if( distanceClose(thisCenter, targetCenter))
-                                letterCollection[k] = "";
+                                letterCollection[k] = " ";
                             k++;
                         }
                         break;
@@ -409,7 +401,6 @@ public class ContentFragment extends Fragment  {
                         }
                         checkText();
                         break;
-
 
                     default:
                         break;
