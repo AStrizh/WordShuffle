@@ -130,7 +130,6 @@ public class ContentFragment extends Fragment  {
         wordWorking = word;
         Drawable box = ContextCompat.getDrawable(context, R.drawable.box);
 
-        //TODO: Replace with method in Word Shuffle class
         String[] letters = shuffle(wordWorking);
         wordLength = letters.length;
         int leftMarginView;

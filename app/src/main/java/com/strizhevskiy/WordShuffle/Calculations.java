@@ -7,14 +7,10 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-/**
- * Created by abstr on 12/23/2016.
- */
 
 class Calculations {
 
     private static final int MINDISTANCE = 100;
-
 
 
     //Kunth shuffle to mix the letters of the word around
@@ -22,13 +18,8 @@ class Calculations {
 
         Random gen = new Random();
 
-        //TODO: Change to char to String cast rather than array copy
-        //Gets rid of an extra empty element resulting from the split method
-        //NOTE: May need to be changed in Android N! (When Android upgrades to Java 8)
-        String[] mockLetters = word.split("");
+        String[] letters = breakString(word);
         int n = word.length();
-        String[] letters = new String[n];
-        System.arraycopy(mockLetters,1,letters,0,n);
 
         while (n > 1) {
             int k = gen.nextInt(n--);
@@ -36,7 +27,6 @@ class Calculations {
             letters[n] = letters[k];
             letters[k] = temp;
         }
-
         return letters;
     }
 
@@ -113,6 +103,15 @@ class Calculations {
         float centreY =  v.getY() + v.getHeight() / 2;
 
         return new PointF(centreX, centreY);
+    }
+
+    static String[] breakString (String word) {
+
+        String[] letters = new String[word.length()];
+        for (int i = 0; i<word.length(); i++)
+            letters[i] = String.valueOf(word.charAt(i));
+
+        return letters;
     }
 
 

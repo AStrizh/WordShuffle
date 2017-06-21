@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import static com.strizhevskiy.WordShuffle.Calculations.*;
+
 //import static com.strizhevskiy.WordShuffle.Calculations.shuffle;
 
 
@@ -31,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     PointF[] viewStartPositions;
     int wordLength;
 
-    //TODO: Add the animated Word Shuffle splash screen sequence
     //TODO: Make sure the animated sequence word placement adjusts to any screen type
 
     @Override
@@ -43,15 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
         ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
 
-        PointF[] holeCenters;
-        ImageView[] myImageViews;
         DisplayMetrics metrics;
         int widthScreen;
         int indentElement;
         int viewSideLength;
-        int paddingElement;
-        boolean firstLoad;
-        int minDistance = 100;
         int leftMarginView;
 
 
@@ -67,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         String wordWorking = "WORDSHUFFLE";
         wordLength = wordWorking.length();
 
-        String[] letters = new String[wordLength];
-        String[] mockLetters = wordWorking.split("");
-        System.arraycopy(mockLetters,1,letters,0,wordLength);
+        String[] letters = breakString(wordWorking); //new String[wordLength];
+//        String[] mockLetters = wordWorking.split("");
+//        System.arraycopy(mockLetters,1,letters,0,wordLength);
 
         myTextViews = new TextView[wordLength];
         viewStartPositions = new PointF[wordLength];
@@ -129,13 +125,10 @@ public class MainActivity extends AppCompatActivity {
 
         new CountDownTimer(7000, 1000) {
 
-            public void onTick(long millisUntilFinished) {
-                //mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
-            }
+            public void onTick(long millisUntilFinished) {}
 
             public void onFinish() {
-                generateViewPositions();
-                //mTextField.setText("done!");
+                viewStartPositions = generateViewPositions(myTextViews);
                 shuffle(viewStartPositions);
                 reset();
             }
@@ -166,33 +159,16 @@ public class MainActivity extends AppCompatActivity {
     public Context getCtxt() { return context;}
 
 
-    private boolean generateViewPositions() {
-
-        int n = myTextViews.length;
-        float startX;
-        float startY;
-
-        for (int i = 0; i<n; i++) {
-
-            startX = myTextViews[i].getX();
-            startY = myTextViews[i].getY();
-            viewStartPositions[i] = new PointF(startX, startY);
-        }
-
-        return true;
-    }
-
-
-
+    //The code below animates the movement of the tiles to their new positions
     private void reset(){
 
         TranslateAnimation animation;
 
         for(int j = 0; j<wordLength;j++) {
 
-            //The code below animates the movement of the tiles to their new positions
-            animation = new TranslateAnimation((int)myTextViews[j].getX()-(int)viewStartPositions[j].x,
-                    0, (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
+            animation = new TranslateAnimation(
+                    (int)myTextViews[j].getX()-(int)viewStartPositions[j].x, 0,
+                    (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
 
             animation.setDuration(1000);
             myTextViews[j].startAnimation(animation);
@@ -203,38 +179,15 @@ public class MainActivity extends AppCompatActivity {
 
         new CountDownTimer(3000, 1000) {
 
-            public void onTick(long millisUntilFinished) {
-                //mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
-            }
+            public void onTick(long millisUntilFinished){}
 
             public void onFinish() {
-                generateViewPositions();
-                //mTextField.setText("done!");
+                viewStartPositions = generateViewPositions(myTextViews);
                 shuffle(viewStartPositions);
                 reset();
             }
         }.start();
 
     }
-
-    //Kunth shuffle to mix and array of points
-    static PointF[] shuffle (PointF[] positions) {
-
-        Random gen = new Random();
-
-        int n = positions.length;
-
-
-        while (n > 1) {
-            int k = gen.nextInt(n--);
-            PointF temp = positions[n];
-            positions[n] = positions[k];
-            positions[k] = temp;
-        }
-
-        return positions;
-    }
-
-
 
 }
