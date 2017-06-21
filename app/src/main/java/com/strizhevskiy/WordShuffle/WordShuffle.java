@@ -78,7 +78,7 @@ public class WordShuffle {
 
         }
 
-        String[] trimmed = new String[4];
+        String[] trimmed = new String[3];
 
         trimmed[0] = orgWord;
         trimmed[1] = rank;

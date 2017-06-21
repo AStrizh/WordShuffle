@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -376,25 +377,30 @@ public class ContentFragment extends Fragment  {
                         view.setY((int) (StartPT.y + mv.y));
                         StartPT = new PointF(view.getX(), view.getY());
                         break;
+
                     case MotionEvent.ACTION_DOWN:
                         DownPT.x = event.getX();
                         DownPT.y = event.getY();
                         StartPT = new PointF(view.getX(), view.getY());
+
+                        //Checks if a view is being moved out of a target, clears that letter
+                        PointF thisCenter = getCenter(view);
+
+                        int k=0;
+                        for (PointF targetCenter : holeCenters) {
+                            if( distanceClose(thisCenter, targetCenter))
+                                letterCollection[k] = "";
+                            k++;
+                        }
                         break;
 
                     case MotionEvent.ACTION_UP:
-
-                        /*
-                        When finger lifted the System checks if the center of the view is close to
-                        any of the targets. If it is the view snaps to the target
-                         */
-                        //TODO: See if this entire section can be moved to Calculations class
+                        //Checks if center of view is close to any targets. If true snaps to target
                         PointF currentCenter = getCenter(view);
 
                         int i=0;
                         for (PointF targetCenter : holeCenters) {
-
-                            if ( distanceClose( currentCenter, targetCenter) ) {
+                            if ( distanceClose(currentCenter, targetCenter) ) {
                                 view.setX((int)( targetCenter.x - (view.getWidth()/2) ) );
                                 view.setY((int)( targetCenter.y - (view.getHeight()/2)) );
 
@@ -406,12 +412,9 @@ public class ContentFragment extends Fragment  {
 
                                 break;
                             }
-
                             i++;
                         }
-
                         checkText();
-
                         break;
 
 
@@ -420,8 +423,6 @@ public class ContentFragment extends Fragment  {
                 }
                 return true;
             }
-
-
         };
     }
 
@@ -436,12 +437,6 @@ public class ContentFragment extends Fragment  {
         mInterstitialAd.loadAd(adRequest);
     }
 
-
-
-// TODO: Check if the calculation methods can be moved without issues
-
-//------------------------------------------------------------------------------------------------//
-//----------------------Methods Below should be moved to a new Class------------------------------//
 
     //This method checks for overlap if two views are in the same target.
     //That is, if you put one letter on top of another letter which is already in a target spot
@@ -484,7 +479,6 @@ public class ContentFragment extends Fragment  {
             myTextViews[j].setX((int)( viewStartPositions[j].x ) );
             myTextViews[j].setY((int)( viewStartPositions[j].y ) );
         }
-
     }
 
 }
