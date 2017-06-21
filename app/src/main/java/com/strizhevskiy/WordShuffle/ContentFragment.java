@@ -50,8 +50,6 @@ public class ContentFragment extends Fragment  {
     int points;
     int total;
 
-
-    //Below Values Added from Tester Migration
     private ViewGroup mainLayout;
     private PointF[] holeCenters;
     private PointF[] viewStartPositions;
@@ -122,7 +120,6 @@ public class ContentFragment extends Fragment  {
 
         return(fragView);
     }
-    // This is the end of the primary method
 
 
 
@@ -150,8 +147,8 @@ public class ContentFragment extends Fragment  {
         for (int i = 0; i < wordLength; i++) {
             final TextView rowTextView = new TextView(context);
 
-            RelativeLayout.LayoutParams viewParam =
-                    new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+            RelativeLayout.LayoutParams viewParam = new RelativeLayout.LayoutParams(
+                            RelativeLayout.LayoutParams.WRAP_CONTENT,
                             RelativeLayout.LayoutParams.WRAP_CONTENT);
 
 
@@ -168,8 +165,7 @@ public class ContentFragment extends Fragment  {
             rowTextView.setBackground(box);
             rowTextView.setText(letters[i]);
             rowTextView.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-            rowTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                    getResources().getDimension(R.dimen.size));
+            rowTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.size));
 
             rowTextView.setGravity(Gravity.CENTER);
 
@@ -307,9 +303,8 @@ public class ContentFragment extends Fragment  {
     //Checks if  user got the word right
     private void checkText() {
 
-
-        //Assembles a string from the array of positioned letters
-        //Checks if that string is the same as the word
+        //TODO: Change check to use chatAt on wordWorking rather than a StringBuilder on letterCollection
+        //Checks if letters are arranged correctly
         StringBuilder mySBuilder = new StringBuilder();
         for (String letter : letterCollection) {
             mySBuilder.append(letter);

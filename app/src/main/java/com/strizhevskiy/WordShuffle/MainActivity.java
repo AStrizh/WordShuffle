@@ -1,15 +1,33 @@
 package com.strizhevskiy.WordShuffle;
 
 import android.content.Context;
+import android.graphics.PointF;
+import android.graphics.drawable.Drawable;
+import android.os.CountDownTimer;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import static com.strizhevskiy.WordShuffle.Calculations.shuffle;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private static int dictType;
     private Context context;
+
+    TextView[] myTextViews;
+    PointF[] viewStartPositions;
+    int wordLength;
 
     //TODO: Add the animated Word Shuffle splash screen sequence
     //TODO: Make sure the animated sequence word placement adjusts to any screen type
@@ -21,9 +39,114 @@ public class MainActivity extends AppCompatActivity {
 
         context = getApplicationContext();
 
-    }
+        ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this.findViewById(android.R.id.content)).getChildAt(0);
 
-    //TODO: Leave only one button for start until other game modes are available
+        PointF[] holeCenters;
+        ImageView[] myImageViews;
+        DisplayMetrics metrics;
+        int widthScreen;
+        int indentElement;
+        int viewSideLength;
+        int paddingElement;
+        boolean firstLoad;
+        int minDistance = 100;
+        int leftMarginView;
+
+
+        Drawable box = ContextCompat.getDrawable(this, R.drawable.box);
+        Drawable hole = ContextCompat.getDrawable(this, R.drawable.hole);
+
+        metrics = new DisplayMetrics();
+
+        this.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        widthScreen = metrics.widthPixels;
+
+
+        String wordWorking = "WORDSHUFFLE";
+        wordLength = wordWorking.length();
+
+        String[] letters = new String[wordLength];
+        String[] mockLetters = wordWorking.split("");
+        System.arraycopy(mockLetters,1,letters,0,wordLength);
+
+        myTextViews = new TextView[wordLength];
+        viewStartPositions = new PointF[wordLength];
+
+        int fromTop1 = 400;
+        int fromTopCenter = 600;
+        int fromTop2 = 800;
+        float count = 1.4f;
+
+        RelativeLayout.LayoutParams viewParam = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+
+        indentElement = widthScreen/7;
+        viewSideLength = (widthScreen - indentElement) / 7;
+        viewParam.height = viewSideLength;
+        viewParam.width = viewSideLength;
+
+        ImageView boxView = new ImageView(this);
+        int center = (int)(indentElement + (viewSideLength * 2.5f));
+        viewParam.setMargins(center, fromTopCenter, 0, 0);
+        boxView.setLayoutParams(viewParam);
+        boxView.setImageDrawable(hole);
+        viewGroup.addView(boxView);
+
+
+        for (int i = 0; i < wordLength; i++) {
+            final TextView rowTextView = new TextView(this);
+
+            if ( i == 4)
+                count = 0;
+
+            leftMarginView =  (int)(indentElement + (viewSideLength * count));
+
+
+
+            if( i <4)
+                viewParam.setMargins(leftMarginView - 60, fromTop1, 0, 0);
+            else
+                viewParam.setMargins(leftMarginView - 60, fromTop2, 0, 0);
+
+
+            rowTextView.setBackground(box);
+            rowTextView.setText(letters[i]);
+
+            rowTextView.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+            rowTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                    getResources().getDimension(R.dimen.size));
+
+            rowTextView.setGravity(Gravity.CENTER);
+
+
+            rowTextView.setLayoutParams(viewParam);
+            viewGroup.addView(rowTextView);
+            myTextViews[i] = rowTextView;
+            count++;
+        }
+
+
+
+        new CountDownTimer(7000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                //mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                generateViewPositions();
+                //mTextField.setText("done!");
+                shuffle(viewStartPositions);
+                reset();
+            }
+        }.start();
+
+
+
+
+    }
 
     public void ButtonOnClick(View v) {
         switch (v.getId()) {
@@ -44,13 +167,63 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    int getDict() {
-        return dictType;
+    int getDict() { return dictType;}
+
+    public Context getCtxt() { return context;}
+
+
+    private boolean generateViewPositions() {
+
+        int n = myTextViews.length;
+        float startX;
+        float startY;
+
+        for (int i = 0; i<n; i++) {
+
+            startX = myTextViews[i].getX();
+            startY = myTextViews[i].getY();
+            viewStartPositions[i] = new PointF(startX, startY);
+        }
+
+        return true;
     }
 
-    public Context getCtxt() {
-        return context;
+
+
+    private void reset(){
+
+        TranslateAnimation animation;
+
+        for(int j = 0; j<wordLength;j++) {
+
+            //The code below animates the movement of the tiles to their new positions
+            animation = new TranslateAnimation((int)myTextViews[j].getX()-(int)viewStartPositions[j].x,
+                    0, (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
+
+            animation.setDuration(1000);
+            myTextViews[j].startAnimation(animation);
+
+            myTextViews[j].setX((int)( viewStartPositions[j].x ) );
+            myTextViews[j].setY((int)( viewStartPositions[j].y ) );
+        }
+
+        new CountDownTimer(3000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                //mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                generateViewPositions();
+                //mTextField.setText("done!");
+                shuffle(viewStartPositions);
+                reset();
+            }
+        }.start();
+
     }
+
+
 
 
 }
