@@ -17,7 +17,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import static com.strizhevskiy.WordShuffle.Calculations.shuffle;
+import java.util.Random;
+
+//import static com.strizhevskiy.WordShuffle.Calculations.shuffle;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         context = getApplicationContext();
 
-        ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this.findViewById(android.R.id.content)).getChildAt(0);
+        ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
 
         PointF[] holeCenters;
         ImageView[] myImageViews;
@@ -103,13 +105,10 @@ public class MainActivity extends AppCompatActivity {
 
             leftMarginView =  (int)(indentElement + (viewSideLength * count));
 
-
-
             if( i <4)
                 viewParam.setMargins(leftMarginView - 60, fromTop1, 0, 0);
             else
                 viewParam.setMargins(leftMarginView - 60, fromTop2, 0, 0);
-
 
             rowTextView.setBackground(box);
             rowTextView.setText(letters[i]);
@@ -119,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
                     getResources().getDimension(R.dimen.size));
 
             rowTextView.setGravity(Gravity.CENTER);
-
 
             rowTextView.setLayoutParams(viewParam);
             viewGroup.addView(rowTextView);
@@ -142,10 +140,6 @@ public class MainActivity extends AppCompatActivity {
                 reset();
             }
         }.start();
-
-
-
-
     }
 
     public void ButtonOnClick(View v) {
@@ -223,6 +217,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Kunth shuffle to mix and array of points
+    static PointF[] shuffle (PointF[] positions) {
+
+        Random gen = new Random();
+
+        int n = positions.length;
+
+
+        while (n > 1) {
+            int k = gen.nextInt(n--);
+            PointF temp = positions[n];
+            positions[n] = positions[k];
+            positions[k] = temp;
+        }
+
+        return positions;
+    }
 
 
 
