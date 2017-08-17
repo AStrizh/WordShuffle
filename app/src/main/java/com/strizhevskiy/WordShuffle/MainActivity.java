@@ -19,7 +19,8 @@ import android.widget.TextView;
 
 import static com.strizhevskiy.WordShuffle.Calculations.*;
 
-
+//TODO: Make sure the animated sequence word placement adjusts to any screen type
+//TODO: When starting game, call new activity instead of creating fragment
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     PointF[] viewStartPositions;
     int wordLength;
 
-    //TODO: Make sure the animated sequence word placement adjusts to any screen type
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

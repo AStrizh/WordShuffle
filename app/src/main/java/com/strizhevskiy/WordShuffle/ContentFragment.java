@@ -65,7 +65,8 @@ public class ContentFragment extends Fragment  {
 
     private static final int ANIMATION_DURATION = 300;
 
-    //TODO: Back button should send user back to splash screen (MainActivity)
+    //TODO: Convert this fragment into an independent activity
+
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
@@ -292,8 +293,6 @@ public class ContentFragment extends Fragment  {
     }
 
 
-
-
     //Checks if  user got the word right
     private void checkText() {
 
@@ -305,14 +304,17 @@ public class ContentFragment extends Fragment  {
             letterCount = 0;
             Log.v("letterCount lowered", String.valueOf(letterCount));
 
-            //TODO: Make a better points system (Kamaran's method)
-            points = ( Integer.parseInt(
-                    words[1]) * wordLength ) - (points % 100);
+            points = ( Integer.parseInt( words[1] ) );
 
             total += points;
 
             score.setText("Total: " + total);
-            message.setText(String.format(getString(R.string.correct), points));
+
+            if( points>1)
+                message.setText(String.format(getString(R.string.correct2), points));
+
+            else
+                message.setText(getString(R.string.correct1));
 
             //This pair removes the all word blocks
             for(View v : myTextViews)
