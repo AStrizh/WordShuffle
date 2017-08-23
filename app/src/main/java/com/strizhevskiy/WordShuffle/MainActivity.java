@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         context = getApplicationContext();
 
-        ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
+        ViewGroup viewGroup = findViewById(android.R.id.content);
 
         DisplayMetrics metrics;
         int widthScreen;
@@ -81,10 +81,13 @@ public class MainActivity extends AppCompatActivity {
         viewParam.height = viewSideLength;
         viewParam.width = viewSideLength;
 
+
         ImageView boxView = new ImageView(this);
         int center = (int)(indentElement + (viewSideLength * 2.5f));
-        viewParam.setMargins(center, fromTopCenter, 0, 0);
+
         boxView.setLayoutParams(viewParam);
+        boxView.setX(center); boxView.setY(fromTopCenter);
+
         boxView.setImageDrawable(hole);
         viewGroup.addView(boxView);
 
@@ -97,10 +100,13 @@ public class MainActivity extends AppCompatActivity {
 
             leftMarginView =  (int)(indentElement + (viewSideLength * count));
 
-            if( i <4)
-                viewParam.setMargins(leftMarginView - 60, fromTop1, 0, 0);
-            else
-                viewParam.setMargins(leftMarginView - 60, fromTop2, 0, 0);
+            if( i < 4 ) {
+                rowTextView.setX(leftMarginView - 60); rowTextView.setY(fromTop1);
+            }
+            else {
+                rowTextView.setX(leftMarginView - 60); rowTextView.setY(fromTop2);
+            }
+
 
             rowTextView.setBackground(box);
             rowTextView.setText(letters[i]);
