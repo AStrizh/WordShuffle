@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         context = getApplicationContext();
 
-        ViewGroup viewGroup = (ViewGroup) findViewById(android.R.id.content);
+        ViewGroup viewGroup = findViewById(android.R.id.content);
 
         DisplayMetrics metrics;
         int widthScreen;
