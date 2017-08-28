@@ -1,4 +1,4 @@
-package com.strizhevskiy.WordShuffle;
+package com.erudos.WordShuffle;
 
 import android.content.Context;
 import android.graphics.PointF;
@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import static com.strizhevskiy.WordShuffle.Calculations.*;
+import static com.erudos.WordShuffle.Calculations.*;
 
 //TODO: Make sure the animated sequence word placement adjusts to any screen type
 //TODO: When starting game, call new activity instead of creating fragment
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         Drawable box = ContextCompat.getDrawable(this, R.drawable.box);
         Drawable hole = ContextCompat.getDrawable(this, R.drawable.hole);
+        Drawable logo = ContextCompat.getDrawable(this, R.drawable.logotransparent);
 
         metrics = new DisplayMetrics();
 
@@ -66,9 +67,11 @@ public class MainActivity extends AppCompatActivity {
         myTextViews = new TextView[wordLength];
         viewStartPositions = new PointF[wordLength];
 
-        int fromTop1 = 400;
-        int fromTopCenter = 600;
-        int fromTop2 = 800;
+        int fromTop1 = 200;
+        int fromTopCenter = 400;
+        int fromTop2 = 600;
+        int fromTopby = 800;
+        int fromTop3 = 900;
         float count = 1.4f;
 
         RelativeLayout.LayoutParams viewParam = new RelativeLayout.LayoutParams(
@@ -126,7 +129,20 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        new CountDownTimer(7000, 1000) {
+        ImageView logoView = new ImageView(this);
+        viewParam.height = widthScreen/4;
+        viewParam.width = (3*widthScreen)/4;
+
+        logoView.setLayoutParams(viewParam);
+        logoView.setX(widthScreen/8); logoView.setY(fromTop3);
+
+        logoView.setImageDrawable(logo);
+        viewGroup.addView(logoView);
+
+
+
+
+        new CountDownTimer(4000, 1000) {
 
             public void onTick(long millisUntilFinished) {}
 

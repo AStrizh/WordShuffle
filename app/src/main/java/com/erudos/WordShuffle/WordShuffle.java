@@ -1,4 +1,4 @@
-package com.strizhevskiy.WordShuffle;
+package com.erudos.WordShuffle;
 
 import android.content.Context;
 import java.io.BufferedReader;

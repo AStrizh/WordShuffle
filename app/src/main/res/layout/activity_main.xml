@@ -16,9 +16,10 @@
         android:text="Start"
         android:id="@+id/easy"
         android:onClick="ButtonOnClick"
-        android:layout_marginBottom="119dp"
+        android:layout_marginBottom="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
 
     <!--
     <Button

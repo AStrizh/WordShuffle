@@ -1,4 +1,14 @@
-package com.strizhevskiy.WordShuffle;
+package com.erudos.WordShuffle;
+
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.animation.TranslateAnimation;
+
+
 
 import android.content.Context;
 import android.graphics.PointF;
@@ -29,10 +39,10 @@ import com.google.android.gms.ads.InterstitialAd;
 
 import java.io.IOException;
 
-import static com.strizhevskiy.WordShuffle.Calculations.*;
+import static com.erudos.WordShuffle.Calculations.*;
 
 
-public class ContentFragment extends Fragment  {
+public class GameActivity extends AppCompatActivity {
 
     private String[] words;
     private Context context;
@@ -65,23 +75,31 @@ public class ContentFragment extends Fragment  {
 
     private static final int ANIMATION_DURATION = 300;
 
-    //TODO: Convert this fragment into an independent activity
+
+
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.content_game);
 
-        fragView = inflater.inflate(R.layout.mainfrag, container, false);
-        mainLayout = (RelativeLayout) fragView;
+        //TODO: Retrieve dictionary request here
+        //TODO: Layout inflaters need to go down here
+        //-------------------------------------------//
 
-        int fileResource = ((MainActivity)getActivity()).getDict();
-        context = (getActivity()).getApplicationContext();
+//        fragView = inflater.inflate(R.layout.mainfrag, container, false);
+//        mainLayout = (RelativeLayout) fragView;
+//
+//        int fileResource = ((MainActivity)getActivity()).getDict();
+//        context = (getActivity()).getApplicationContext();
+
+
+        //-------------------------------------------//
 
         //Gets the screen width so views could be built proportionally
         DisplayMetrics metrics = new DisplayMetrics();
 
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        //getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
         widthScreen = metrics.widthPixels;
 
         try {
@@ -116,11 +134,11 @@ public class ContentFragment extends Fragment  {
         bannerAd.loadAd(adRequest);
 
 
-        return(fragView);
+        //return(fragView);
+
+
+
     }
-
-
-
 
     //Creates movable textViews based on the provided word
     private void wordBuilder(String word) {
@@ -145,8 +163,8 @@ public class ContentFragment extends Fragment  {
             final TextView rowTextView = new TextView(context);
 
             RelativeLayout.LayoutParams viewParam = new RelativeLayout.LayoutParams(
-                            RelativeLayout.LayoutParams.WRAP_CONTENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
 
 
             indentElement = widthScreen/wordLength;
@@ -192,8 +210,8 @@ public class ContentFragment extends Fragment  {
 
 
             RelativeLayout.LayoutParams imageParam = new RelativeLayout.LayoutParams(
-                            RelativeLayout.LayoutParams.WRAP_CONTENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
 
             int paddingElement = indentElement/(wordLength + 1);
             viewSideLength = (widthScreen - indentElement) / wordLength;
@@ -431,7 +449,7 @@ public class ContentFragment extends Fragment  {
     }
 
 
-   //Checks overlap between tiles. If true moves background tile to start position
+    //Checks overlap between tiles. If true moves background tile to start position
     private void overlap(View view){
 
         for(int j = 0; j<wordLength;j++) {
@@ -452,6 +470,8 @@ public class ContentFragment extends Fragment  {
             }
         }
     }
+
+
 
     //Animates the movement of tiles to their start position
     private void reset(){

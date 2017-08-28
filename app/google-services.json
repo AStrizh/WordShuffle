@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:900047291884:android:074f69c9b8afd3ab",
         "android_client_info": {
-          "package_name": "com.strizhevskiy.WordShuffle"
+          "package_name": "com.erudos.WordShuffle"
         }
       },
       "oauth_client": [

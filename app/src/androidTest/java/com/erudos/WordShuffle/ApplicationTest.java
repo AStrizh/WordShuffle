@@ -1,4 +1,4 @@
-package com.strizhevskiy.WordShuffle;
+package com.erudos.WordShuffle;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

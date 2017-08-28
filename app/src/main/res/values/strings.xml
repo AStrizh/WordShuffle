@@ -15,5 +15,6 @@
     <string name="incorrect">Sorry. That\'s not right, please try again.</string>
     <string name="banner_ad_unit_id">ca-app-pub-4666553980283897/5095785681</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-4666553980283897/6026310707</string>
+    <string name="title_activity_game">GameActivity</string>
 
 </resources>
