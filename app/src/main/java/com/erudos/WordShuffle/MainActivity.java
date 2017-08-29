@@ -1,6 +1,5 @@
 package com.erudos.WordShuffle;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
@@ -24,8 +23,6 @@ import static com.erudos.WordShuffle.Calculations.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int dictType;
-    private Context context;
     public static final String DIFFICULTY = "com.erudos.WordShuffle.DIFFICULTY";
 
     TextView[] myTextViews;
@@ -38,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        context = getApplicationContext();
 
         ViewGroup viewGroup = findViewById(android.R.id.content);
 
@@ -71,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         int fromTop1 = 200;
         int fromTopCenter = 400;
         int fromTop2 = 600;
-        int fromTopby = 800;
         int fromTop3 = 900;
         float count = 1.4f;
 
@@ -129,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
         ImageView logoView = new ImageView(this);
         viewParam.height = widthScreen/4;
         viewParam.width = (3*widthScreen)/4;
@@ -172,10 +165,6 @@ public class MainActivity extends AppCompatActivity {
 //                break;
         }
     }
-
-    int getDict() { return dictType;}
-
-    public Context getCtxt() { return context;}
 
 
     //The code below animates the movement of the tiles to their new positions

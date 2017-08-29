@@ -31,6 +31,7 @@ import java.io.IOException;
 
 import static com.erudos.WordShuffle.Calculations.*;
 
+//TODO: Remove setMargin() calls and change to setX() and setY() calls
 public class GameActivity extends AppCompatActivity {
 
     private String[] words;
