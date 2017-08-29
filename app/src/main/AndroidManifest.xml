@@ -20,16 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".GameActivity2"
-            android:label="@string/title_activity_game2"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.erudos.WordShuffle.MainActivity" />
-        </activity>
+
     </application>
 
 </manifest>

@@ -160,13 +160,8 @@ public class MainActivity extends AppCompatActivity {
     public void ButtonOnClick(View v) {
         switch (v.getId()) {
             case R.id.easy:
-                Log.d("1", "Started game");
-                Intent intent = new Intent(this, GameActivity2.class);
-                String dictType = Integer.toString(R.raw.dictionary_easy);
-                intent.putExtra(DIFFICULTY, dictType);
-                startActivity(intent);
-                //dictType = R.raw.dictionary_easy;
-                //setContentView(R.layout.fragloader);
+                dictType = R.raw.dictionary_easy;
+                setContentView(R.layout.fragloader);
                 break;
 
             //Commented until more dictionaries available
