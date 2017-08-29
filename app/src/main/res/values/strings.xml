@@ -16,5 +16,7 @@
     <string name="banner_ad_unit_id">ca-app-pub-4666553980283897/5095785681</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-4666553980283897/6026310707</string>
     <string name="title_activity_game">GameActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_game2">GameActivity2</string>
 
 </resources>

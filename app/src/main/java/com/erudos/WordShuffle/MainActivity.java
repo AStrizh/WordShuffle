@@ -1,6 +1,7 @@
 package com.erudos.WordShuffle;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
 import android.os.CountDownTimer;
@@ -8,6 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static int dictType;
     private Context context;
+    public static final String DIFFICULTY = "com.erudos.WordShuffle.DIFFICULTY";
 
     TextView[] myTextViews;
     PointF[] viewStartPositions;
@@ -157,8 +160,13 @@ public class MainActivity extends AppCompatActivity {
     public void ButtonOnClick(View v) {
         switch (v.getId()) {
             case R.id.easy:
-                dictType = R.raw.dictionary_easy;
-                setContentView(R.layout.fragloader);
+                Log.d("1", "Started game");
+                Intent intent = new Intent(this, GameActivity2.class);
+                String dictType = Integer.toString(R.raw.dictionary_easy);
+                intent.putExtra(DIFFICULTY, dictType);
+                startActivity(intent);
+                //dictType = R.raw.dictionary_easy;
+                //setContentView(R.layout.fragloader);
                 break;
 
             //Commented until more dictionaries available

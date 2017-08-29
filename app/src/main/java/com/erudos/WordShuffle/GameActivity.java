@@ -1,10 +1,8 @@
 package com.erudos.WordShuffle;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
 
@@ -13,8 +11,6 @@ import android.view.animation.TranslateAnimation;
 import android.content.Context;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -46,7 +42,8 @@ public class GameActivity extends AppCompatActivity {
 
     private String[] words;
     private Context context;
-    private View fragView;
+    //private View fragView;
+    private ViewGroup contentView;
     private InterstitialAd mInterstitialAd;
 
     private WordShuffle ws;
@@ -58,7 +55,7 @@ public class GameActivity extends AppCompatActivity {
     private int points;
     private int total;
 
-    private ViewGroup mainLayout;
+    //private ViewGroup mainLayout;
     private PointF[] holeCenters;
     private PointF[] viewStartPositions;
     private ImageView[] myImageViews;
@@ -87,6 +84,11 @@ public class GameActivity extends AppCompatActivity {
         //TODO: Layout inflaters need to go down here
         //-------------------------------------------//
 
+        Intent intent = getIntent();
+        int fileResource = Integer.parseInt(intent.getStringExtra(MainActivity.DIFFICULTY));
+        contentView = findViewById(android.R.id.content);
+        context = getApplicationContext();
+
 //        fragView = inflater.inflate(R.layout.mainfrag, container, false);
 //        mainLayout = (RelativeLayout) fragView;
 //
@@ -94,11 +96,13 @@ public class GameActivity extends AppCompatActivity {
 //        context = (getActivity()).getApplicationContext();
 
 
+
         //-------------------------------------------//
 
         //Gets the screen width so views could be built proportionally
         DisplayMetrics metrics = new DisplayMetrics();
 
+        Log.d("4", "Retrieved the display metrics");
         //getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
         widthScreen = metrics.widthPixels;
 
@@ -111,7 +115,7 @@ public class GameActivity extends AppCompatActivity {
         }
 
 
-        resetBtn=(Button)fragView.findViewById(R.id.reset);
+        resetBtn= findViewById(R.id.reset);
 
 
         mInterstitialAd = new InterstitialAd(context);
@@ -129,20 +133,17 @@ public class GameActivity extends AppCompatActivity {
         initializer();
 
 
-        AdView bannerAd = (AdView) fragView.findViewById(R.id.bannerAd);
+        AdView bannerAd = findViewById(R.id.bannerAd);
         AdRequest adRequest = new AdRequest.Builder().build();
         bannerAd.loadAd(adRequest);
-
-
-        //return(fragView);
-
-
+        Log.d("5", "Finished the banner ad requests");
 
     }
 
     //Creates movable textViews based on the provided word
     private void wordBuilder(String word) {
 
+        Log.d("6", "Started wordbuilder method, the word is" + word);
         wordWorking = word;
         Drawable box = ContextCompat.getDrawable(context, R.drawable.box);
 
@@ -159,13 +160,13 @@ public class GameActivity extends AppCompatActivity {
             letterCollection[i] = " ";
         }
 
+        //TODO: Check what is going on here. Am I really redoing calculations for every letter?
         for (int i = 0; i < wordLength; i++) {
             final TextView rowTextView = new TextView(context);
 
             RelativeLayout.LayoutParams viewParam = new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.WRAP_CONTENT,
                     RelativeLayout.LayoutParams.WRAP_CONTENT);
-
 
             indentElement = widthScreen/wordLength;
 
@@ -184,18 +185,22 @@ public class GameActivity extends AppCompatActivity {
 
             rowTextView.setGravity(Gravity.CENTER);
 
-            mainLayout.addView(rowTextView);
+            contentView.addView(rowTextView);
             rowTextView.setLayoutParams(viewParam);
             rowTextView.setOnTouchListener(onTouchListener());
 
             myTextViews[i] = rowTextView;
 
+
         }
+        Log.d("8", "Successfully wrapped word in layout");
     }
 
 
     //Creates static target views  based on the length of the provided word
     private void targetBuilder() {
+
+        Log.d("X", "Started building the targets");
 
         Drawable hole = ContextCompat.getDrawable(context, R.drawable.hole);
         myImageViews = new ImageView[wordLength];
@@ -226,8 +231,9 @@ public class GameActivity extends AppCompatActivity {
             imageParam.setMargins(leftMarginImage, topOffset, 0, 0);
 
 
-            mainLayout.addView(holeView);
+            contentView.addView(holeView);
             holeView.setLayoutParams(imageParam);
+            Log.d("15", "Added the holeview to the layout");
 
             myImageViews[i] = holeView;
 
@@ -238,7 +244,8 @@ public class GameActivity extends AppCompatActivity {
     //Set the parameters for the first game
     private void initializer(){
 
-        Button skip = (Button)fragView.findViewById(R.id.skip);
+        Log.d("9", "Initializing first game");
+        Button skip = findViewById(R.id.skip);
         skip.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (mInterstitialAd.isLoaded()) {
@@ -246,15 +253,14 @@ public class GameActivity extends AppCompatActivity {
                 } else {
                     skip();
                 }
-
             }
         });
 
-        score = (TextView)fragView.findViewById(R.id.total);
-        message = (TextView)fragView.findViewById(R.id.message);
-        hint = (TextView)fragView.findViewById(R.id.hint);
+        score = findViewById(R.id.total);
+        message = findViewById(R.id.message);
+        hint = findViewById(R.id.hint);
         taskBuilder();
-
+        Log.d("10", "completed the taskbuilder");
     }
 
 
@@ -262,12 +268,15 @@ public class GameActivity extends AppCompatActivity {
     //Calls WordShuffle method to select a new word
     private void taskBuilder(){
 
+        Log.d("11", "In the task builder");
         words = ws.taskCreator();
 
         //Resets the screen with a new word challenge
         firstLoad = true;
         wordBuilder(words[0]);
         targetBuilder();
+
+        Log.d("12", "launched wordbuilder and targetbuilder methods");
 
         hint.setText(words[2]);
 
@@ -302,9 +311,9 @@ public class GameActivity extends AppCompatActivity {
 
         //This pair removes the all word blocks
         for(View v : myTextViews)
-            mainLayout.removeView(v);
+            contentView.removeView(v);
         for(View v : myImageViews)
-            mainLayout.removeView(v);
+            contentView.removeView(v);
 
         taskBuilder();
 
@@ -336,9 +345,9 @@ public class GameActivity extends AppCompatActivity {
 
             //This pair removes the all word blocks
             for(View v : myTextViews)
-                mainLayout.removeView(v);
+                contentView.removeView(v);
             for(View v : myImageViews)
-                mainLayout.removeView(v);
+                contentView.removeView(v);
 
             taskBuilder();
 
@@ -348,6 +357,7 @@ public class GameActivity extends AppCompatActivity {
     //Controls all the motion for the views
     private View.OnTouchListener onTouchListener() {
 
+        Log.d("13", "Called the onTouch listener");
         return new View.OnTouchListener() {
 
             //Points used to track view position during movement
@@ -364,6 +374,7 @@ public class GameActivity extends AppCompatActivity {
                  */
                 if(firstLoad){
 
+                    Log.d("14", "Doing the first load job");
                     viewStartPositions = generateViewPositions( myTextViews );
                     holeCenters = generateTargetCenters( myImageViews );
                     firstLoad = false;
