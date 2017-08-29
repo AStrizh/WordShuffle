@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static int dictType;
     private Context context;
-    public static final String DIFFICULTY = "com.erudos.WordShuffle.DIFFICULTY";
 
     TextView[] myTextViews;
     PointF[] viewStartPositions;
