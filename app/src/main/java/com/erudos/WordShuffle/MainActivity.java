@@ -9,7 +9,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -22,12 +21,12 @@ import android.widget.TextView;
 import static com.erudos.WordShuffle.Calculations.*;
 
 //TODO: Make sure the animated sequence word placement adjusts to any screen type
-//TODO: When starting game, call new activity instead of creating fragment
 
 public class MainActivity extends AppCompatActivity {
 
     private static int dictType;
     private Context context;
+    public static final String DIFFICULTY = "com.erudos.WordShuffle.DIFFICULTY";
 
     TextView[] myTextViews;
     PointF[] viewStartPositions;
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         metrics = new DisplayMetrics();
 
-        this.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
         widthScreen = metrics.widthPixels;
 
 
@@ -141,9 +140,6 @@ public class MainActivity extends AppCompatActivity {
         logoView.setImageDrawable(logo);
         viewGroup.addView(logoView);
 
-
-
-
         new CountDownTimer(4000, 1000) {
 
             public void onTick(long millisUntilFinished) {}
@@ -159,8 +155,10 @@ public class MainActivity extends AppCompatActivity {
     public void ButtonOnClick(View v) {
         switch (v.getId()) {
             case R.id.easy:
-                dictType = R.raw.dictionary_easy;
-                setContentView(R.layout.fragloader);
+                Intent intent = new Intent(this, GameActivity.class);
+                String dictType = Integer.toString(R.raw.dictionary_easy);
+                intent.putExtra(DIFFICULTY, dictType);
+                startActivity(intent);
                 break;
 
             //Commented until more dictionaries available

@@ -1,16 +1,16 @@
 package com.erudos.WordShuffle;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,12 +31,11 @@ import java.io.IOException;
 
 import static com.erudos.WordShuffle.Calculations.*;
 
-
-public class ContentFragment extends Fragment  {
+public class GameActivity extends AppCompatActivity {
 
     private String[] words;
     private Context context;
-    private View fragView;
+    private ViewGroup contentView;
     private InterstitialAd mInterstitialAd;
 
     private WordShuffle ws;
@@ -48,7 +47,6 @@ public class ContentFragment extends Fragment  {
     private int points;
     private int total;
 
-    private ViewGroup mainLayout;
     private PointF[] holeCenters;
     private PointF[] viewStartPositions;
     private ImageView[] myImageViews;
@@ -65,23 +63,22 @@ public class ContentFragment extends Fragment  {
 
     private static final int ANIMATION_DURATION = 300;
 
-    //TODO: Convert this fragment into an independent activity
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
 
-        fragView = inflater.inflate(R.layout.mainfrag, container, false);
-        mainLayout = (RelativeLayout) fragView;
+        Intent intent = getIntent();
+        int fileResource = Integer.parseInt(intent.getStringExtra(MainActivity.DIFFICULTY));
+        contentView = findViewById(android.R.id.content);
+        context = getApplicationContext();
 
-        int fileResource = ((MainActivity)getActivity()).getDict();
-        context = (getActivity()).getApplicationContext();
 
         //Gets the screen width so views could be built proportionally
         DisplayMetrics metrics = new DisplayMetrics();
 
-        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
         widthScreen = metrics.widthPixels;
 
         try {
@@ -93,11 +90,11 @@ public class ContentFragment extends Fragment  {
         }
 
 
-        resetBtn=(Button)fragView.findViewById(R.id.reset);
+        resetBtn= findViewById(R.id.reset);
 
 
         mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId( getString(R.string.interstitial_ad_unit_id));
+        mInterstitialAd.setAdUnitId( getString(R.string.interstitial_ad_test));
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
@@ -108,119 +105,18 @@ public class ContentFragment extends Fragment  {
         });
 
         requestNewInterstitial();
-        initializer();
 
-
-        AdView bannerAd = (AdView) fragView.findViewById(R.id.bannerAd);
+        AdView bannerAd = findViewById(R.id.bannerAd);
         AdRequest adRequest = new AdRequest.Builder().build();
         bannerAd.loadAd(adRequest);
 
-
-        return(fragView);
+        initializer();
     }
-
-
-
-
-    //Creates movable textViews based on the provided word
-    private void wordBuilder(String word) {
-
-        wordWorking = word;
-        Drawable box = ContextCompat.getDrawable(context, R.drawable.box);
-
-        String[] letters = shuffle(wordWorking);
-        wordLength = letters.length;
-        int leftMarginView;
-
-
-        myTextViews = new TextView[wordLength];
-        viewStartPositions = new PointF[wordLength];
-        letterCollection = new String[wordLength];
-
-        for (int i = 0; i < wordLength; i++) {
-            letterCollection[i] = " ";
-        }
-
-        for (int i = 0; i < wordLength; i++) {
-            final TextView rowTextView = new TextView(context);
-
-            RelativeLayout.LayoutParams viewParam = new RelativeLayout.LayoutParams(
-                            RelativeLayout.LayoutParams.WRAP_CONTENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
-
-
-            indentElement = widthScreen/wordLength;
-
-            viewSideLength = (widthScreen - 2*indentElement) / wordLength;
-
-            leftMarginView =  indentElement + (viewSideLength * i);
-
-            viewParam.height = viewSideLength;
-            viewParam.width = viewSideLength;
-            viewParam.setMargins(leftMarginView, 100, 0, 0);
-
-            rowTextView.setBackground(box);
-            rowTextView.setText(letters[i]);
-            rowTextView.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-            rowTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.size));
-
-            rowTextView.setGravity(Gravity.CENTER);
-
-            mainLayout.addView(rowTextView);
-            rowTextView.setLayoutParams(viewParam);
-            rowTextView.setOnTouchListener(onTouchListener());
-
-            myTextViews[i] = rowTextView;
-
-        }
-    }
-
-
-    //Creates static target views  based on the length of the provided word
-    private void targetBuilder() {
-
-        Drawable hole = ContextCompat.getDrawable(context, R.drawable.hole);
-        myImageViews = new ImageView[wordLength];
-        holeCenters = new PointF[wordLength];
-        int leftMarginImage;
-        int topOffset;
-
-        for (int i = 0; i < wordLength; i++) {
-
-            final ImageView holeView = new ImageView(context);
-            holeView.setImageDrawable(hole);
-
-
-            RelativeLayout.LayoutParams imageParam = new RelativeLayout.LayoutParams(
-                            RelativeLayout.LayoutParams.WRAP_CONTENT,
-                            RelativeLayout.LayoutParams.WRAP_CONTENT);
-
-            int paddingElement = indentElement/(wordLength + 1);
-            viewSideLength = (widthScreen - indentElement) / wordLength;
-
-            leftMarginImage = viewSideLength*i + paddingElement*(i+1);
-
-            imageParam.height = viewSideLength;
-            imageParam.width = viewSideLength;
-
-            topOffset = 100 + viewSideLength + 10;
-
-            imageParam.setMargins(leftMarginImage, topOffset, 0, 0);
-
-
-            mainLayout.addView(holeView);
-            holeView.setLayoutParams(imageParam);
-
-            myImageViews[i] = holeView;
-
-        }
-    }
-
 
     //Set the parameters for the first game
     private void initializer(){
 
-        Button skip = (Button)fragView.findViewById(R.id.skip);
+        Button skip = findViewById(R.id.skip);
         skip.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (mInterstitialAd.isLoaded()) {
@@ -232,14 +128,12 @@ public class ContentFragment extends Fragment  {
             }
         });
 
-        score = (TextView)fragView.findViewById(R.id.total);
-        message = (TextView)fragView.findViewById(R.id.message);
-        hint = (TextView)fragView.findViewById(R.id.hint);
+        score = findViewById(R.id.total);
+        message = findViewById(R.id.message);
+        hint = findViewById(R.id.hint);
         taskBuilder();
 
     }
-
-
 
     //Calls WordShuffle method to select a new word
     private void taskBuilder(){
@@ -258,7 +152,7 @@ public class ContentFragment extends Fragment  {
             public void onClick(View v) {
 
                 RotateAnimation rotateAnimation = new RotateAnimation(
-                        0,360,Animation.RELATIVE_TO_SELF,
+                        0,360, Animation.RELATIVE_TO_SELF,
                         0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
                 rotateAnimation.setDuration(500);
@@ -271,58 +165,92 @@ public class ContentFragment extends Fragment  {
             }
 
         });
-
-
     }
 
+    //Creates movable textViews based on the provided word
+    private void wordBuilder(String word) {
 
-    //Button to allow user to skip word. Shows an interstitial ad.
-    private void skip(){
+        wordWorking = word;
+        Drawable box = ContextCompat.getDrawable(context, R.drawable.box);
 
-        message.setText(getString(R.string.skipped) + " " + words[0]);
-        letterCount = 0;
+        String[] letters = shuffle(wordWorking);
+        wordLength = letters.length;
+        int leftMarginView;
 
-        //This pair removes the all word blocks
-        for(View v : myTextViews)
-            mainLayout.removeView(v);
-        for(View v : myImageViews)
-            mainLayout.removeView(v);
 
-        taskBuilder();
+        myTextViews = new TextView[wordLength];
+        viewStartPositions = new PointF[wordLength];
+        letterCollection = new String[wordLength];
 
+        indentElement = widthScreen/wordLength;
+        viewSideLength = (widthScreen - 2*indentElement) / wordLength;
+
+        RelativeLayout.LayoutParams viewParam = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+        viewParam.height = viewSideLength;
+        viewParam.width = viewSideLength;
+
+        for (int i = 0; i < wordLength; i++) {
+            letterCollection[i] = " ";
+        }
+
+        for (int i = 0; i < wordLength; i++) {
+            final TextView rowTextView = new TextView(context);
+
+            leftMarginView =  indentElement + (viewSideLength * i);
+
+            viewParam.setMargins(leftMarginView, 100, 0, 0);
+
+            rowTextView.setBackground(box);
+            rowTextView.setText(letters[i]);
+            rowTextView.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
+            rowTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.size));
+
+            rowTextView.setGravity(Gravity.CENTER);
+
+            rowTextView.setLayoutParams(viewParam);
+            contentView.addView(rowTextView);
+            rowTextView.setOnTouchListener(onTouchListener());
+
+            myTextViews[i] = rowTextView;
+
+        }
     }
 
+    //Creates static target views  based on the length of the provided word
+    private void targetBuilder() {
 
-    //Checks if  user got the word right
-    private void checkText() {
+        Drawable hole = ContextCompat.getDrawable(context, R.drawable.hole);
+        myImageViews = new ImageView[wordLength];
+        holeCenters = new PointF[wordLength];
+        int leftMarginImage;
+        int topOffset;
 
-        if ( correctAnswer(letterCollection, wordWorking) ){
 
-            for (int j = 0; j < wordLength; j++) {
-                letterCollection[j] = " ";
-            }
-            letterCount = 0;
-            Log.v("letterCount lowered", String.valueOf(letterCount));
+        RelativeLayout.LayoutParams imageParam = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
 
-            points = ( Integer.parseInt( words[1] ) );
+        int paddingElement = indentElement/(wordLength + 1);
+        viewSideLength = (widthScreen - indentElement) / wordLength;
+        imageParam.height = viewSideLength;
+        imageParam.width = viewSideLength;
+        topOffset = 100 + viewSideLength + 10;
 
-            total += points;
 
-            score.setText("Total: " + total);
+        for (int i = 0; i < wordLength; i++) {
 
-            if( points>1)
-                message.setText(String.format(getString(R.string.correct2), points));
+            final ImageView holeView = new ImageView(context);
+            holeView.setImageDrawable(hole);
 
-            else
-                message.setText(getString(R.string.correct1));
+            leftMarginImage = viewSideLength*i + paddingElement*(i+1);
+            imageParam.setMargins(leftMarginImage, topOffset, 0, 0);
 
-            //This pair removes the all word blocks
-            for(View v : myTextViews)
-                mainLayout.removeView(v);
-            for(View v : myImageViews)
-                mainLayout.removeView(v);
-
-            taskBuilder();
+            holeView.setLayoutParams(imageParam);
+            contentView.addView(holeView);
+            myImageViews[i] = holeView;
 
         }
     }
@@ -376,7 +304,6 @@ public class ContentFragment extends Fragment  {
                             if( distanceClose(thisCenter, targetCenter)) {
                                 letterCollection[k] = " ";
                                 letterCount--;
-                                Log.v("letterCount lowered", String.valueOf(letterCount));
                             }
                             k++;
                         }
@@ -395,7 +322,6 @@ public class ContentFragment extends Fragment  {
                                 //Puts the letter from the view into an array for checking later
                                 letterCollection[i] = ( (TextView) view).getText().toString();
                                 letterCount++;
-                                Log.v("letterCount raised", String.valueOf(letterCount));
 
                                 //Checks if the view now overlaps another
                                 overlap(view);
@@ -404,11 +330,8 @@ public class ContentFragment extends Fragment  {
                             }
                             i++;
                         }
-                        if (letterCount == wordLength) {
-                            Log.v("CheckText called", String.valueOf(letterCount));
+                        if (letterCount == wordLength)
                             checkText();
-
-                        }
                         break;
 
                     default:
@@ -419,19 +342,41 @@ public class ContentFragment extends Fragment  {
         };
     }
 
+    //Checks if  user got the word right
+    private void checkText() {
 
+        if ( correctAnswer(letterCollection, wordWorking) ){
 
-    //Method to create interstitial ads
-    private void requestNewInterstitial() {
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("SEE_YOUR_LOGCAT_TO_GET_YOUR_DEVICE_ID")
-                .build();
+            for (int j = 0; j < wordLength; j++) {
+                letterCollection[j] = " ";
+            }
+            letterCount = 0;
+            points = ( Integer.parseInt( words[1] ) );
 
-        mInterstitialAd.loadAd(adRequest);
+            total += points;
+
+            score.setText("Total: " + total);
+
+            if( points>1)
+                message.setText(String.format(getString(R.string.correct2), points));
+
+            else
+                message.setText(getString(R.string.correct1));
+
+            //This pair removes the all word blocks
+            for(View v : myTextViews)
+                contentView.removeView(v);
+            for(View v : myImageViews)
+                contentView.removeView(v);
+
+            taskBuilder();
+
+        }
     }
 
 
-   //Checks overlap between tiles. If true moves background tile to start position
+
+    //Checks overlap between tiles. If true moves background tile to start position
     private void overlap(View view){
 
         for(int j = 0; j<wordLength;j++) {
@@ -439,7 +384,6 @@ public class ContentFragment extends Fragment  {
             if( getCenter(myTextViews[j]).equals( getCenter(view)) &&  myTextViews[j] != view){
 
                 letterCount--;
-                Log.v("letterCount lowered", String.valueOf(letterCount));
                 TranslateAnimation animation = new TranslateAnimation(
                         (int)myTextViews[j].getX()-(int)viewStartPositions[j].x, 0,
                         (int)myTextViews[j].getY()-(int)viewStartPositions[j].y, 0);
@@ -451,6 +395,12 @@ public class ContentFragment extends Fragment  {
                 myTextViews[j].setY((int)( viewStartPositions[j].y ) );
             }
         }
+    }
+
+    //Method to create interstitial ads
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mInterstitialAd.loadAd(adRequest);
     }
 
     //Animates the movement of tiles to their start position
@@ -473,4 +423,18 @@ public class ContentFragment extends Fragment  {
         }
     }
 
+    //Button to allow user to skip word. Shows an interstitial ad.
+    private void skip(){
+
+        message.setText(getString(R.string.skipped) + " " + words[0]);
+        letterCount = 0;
+
+        //This pair removes the all word blocks
+        for(View v : myTextViews)
+            contentView.removeView(v);
+        for(View v : myImageViews)
+            contentView.removeView(v);
+
+        taskBuilder();
+    }
 }
