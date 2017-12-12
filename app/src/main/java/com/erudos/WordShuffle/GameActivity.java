@@ -31,7 +31,6 @@ import java.io.IOException;
 
 import static com.erudos.WordShuffle.Calculations.*;
 
-//TODO: Remove setMargin() calls and change to setX() and setY() calls
 public class GameActivity extends AppCompatActivity {
 
     private String[] words;
@@ -202,8 +201,6 @@ public class GameActivity extends AppCompatActivity {
 
             leftMarginView =  indentElement + (viewSideLength * i);
 
-            viewParam.setMargins(leftMarginView, 100, 0, 0);
-
             rowTextView.setBackground(box);
             rowTextView.setText(letters[i]);
             rowTextView.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
@@ -212,6 +209,7 @@ public class GameActivity extends AppCompatActivity {
             rowTextView.setGravity(Gravity.CENTER);
 
             rowTextView.setLayoutParams(viewParam);
+            rowTextView.setX(leftMarginView); rowTextView.setY(100);
             contentView.addView(rowTextView);
             rowTextView.setOnTouchListener(onTouchListener());
 
@@ -247,9 +245,9 @@ public class GameActivity extends AppCompatActivity {
             holeView.setImageDrawable(hole);
 
             leftMarginImage = viewSideLength*i + paddingElement*(i+1);
-            imageParam.setMargins(leftMarginImage, topOffset, 0, 0);
 
             holeView.setLayoutParams(imageParam);
+            holeView.setX(leftMarginImage); holeView.setY(topOffset);
             contentView.addView(holeView);
             myImageViews[i] = holeView;
 
@@ -374,7 +372,6 @@ public class GameActivity extends AppCompatActivity {
 
         }
     }
-
 
 
     //Checks overlap between tiles. If true moves background tile to start position
