@@ -13,9 +13,10 @@ public class WordShuffle {
     private HashMap<Integer, String> myMap;
     private int fileResource;
     private BufferedReader reader;
-    private static Context context;
+    private Context context;
 
-    private static int listLength = 3000;
+    //TODO: Adjust listlength to depend on difficulty
+    private static int listLength = 200;
 
 
 

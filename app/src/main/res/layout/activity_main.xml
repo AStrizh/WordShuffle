@@ -11,35 +11,33 @@
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
         android:id="@+id/easy"
-        android:onClick="ButtonOnClick"
-        android:layout_marginBottom="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="125dp"
+        android:onClick="ButtonOnClick"
+        android:text="@string/easy" />
 
-
-    <!--
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Medium"
+        android:text="@string/medium"
         android:id="@+id/medium"
-        android:layout_below="@+id/easy"
         android:layout_alignStart="@+id/easy"
-        android:layout_marginTop="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
         android:onClick="ButtonOnClick"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hard"
+        android:text="@string/hard"
         android:id="@+id/hard"
-        android:layout_below="@+id/medium"
         android:layout_alignStart="@+id/medium"
-        android:layout_marginTop="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
         android:onClick="ButtonOnClick"/>
-    -->
+
 </RelativeLayout>

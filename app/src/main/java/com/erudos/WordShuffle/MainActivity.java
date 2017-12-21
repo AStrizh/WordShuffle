@@ -148,20 +148,24 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.easy:
                 Intent intent = new Intent(this, GameActivity.class);
-                String dictType = Integer.toString(R.raw.dictionary_easy);
+                String dictType = Integer.toString(R.raw.dictionary_easy_temp);
                 intent.putExtra(DIFFICULTY, dictType);
                 startActivity(intent);
                 break;
 
             //Commented until more dictionaries available
-//            case R.id.medium:
-//                dictType = R.raw.dictionary_easy;
-//                setContentView(R.layout.fragloader);
-//                break;
-//            case R.id.hard:
-//                dictType = R.raw.dictionary_easy;
-//                setContentView(R.layout.fragloader);
-//                break;
+            case R.id.medium:
+                intent = new Intent(this, GameActivity.class);
+                dictType = Integer.toString(R.raw.dictionary_medium_temp);
+                intent.putExtra(DIFFICULTY, dictType);
+                startActivity(intent);
+                break;
+            case R.id.hard:
+                intent = new Intent(this, GameActivity.class);
+                dictType = Integer.toString(R.raw.dictionary_hard_temp);
+                intent.putExtra(DIFFICULTY, dictType);
+                startActivity(intent);
+                break;
         }
     }
 
