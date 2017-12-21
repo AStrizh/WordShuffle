@@ -47,7 +47,7 @@ public class WordShuffle {
 
         String orgWord = words[0];
         //String shuffled = shuffle(words[0]);
-        String rank = words[1];
+        //String rank = words[1];
 
         words[0] = "";
         words[1] = "";
@@ -82,7 +82,7 @@ public class WordShuffle {
         String[] trimmed = new String[3];
 
         trimmed[0] = orgWord;
-        trimmed[1] = rank;
+        //trimmed[1] = rank;
         trimmed[2] = kb.toString().trim();
 
         return trimmed;

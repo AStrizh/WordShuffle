@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         int fromTop1 = 200;
         int fromTopCenter = 400;
         int fromTop2 = 600;
-        int fromTop3 = 900;
+        int fromTop3 = 800;
         float count = 1.4f;
 
         RelativeLayout.LayoutParams viewParam = new RelativeLayout.LayoutParams(

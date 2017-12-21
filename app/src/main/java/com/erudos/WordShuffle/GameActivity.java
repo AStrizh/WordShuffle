@@ -38,9 +38,9 @@ public class GameActivity extends AppCompatActivity {
     private ViewGroup contentView;
     private InterstitialAd mInterstitialAd;
 
+    //private TextView score;
     private WordShuffle ws;
     private TextView hint;
-    private TextView score;
     private TextView message;
     private Button resetBtn;
 
@@ -128,7 +128,7 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-        score = findViewById(R.id.total);
+        //score = findViewById(R.id.total);
         message = findViewById(R.id.message);
         hint = findViewById(R.id.hint);
         taskBuilder();
@@ -350,17 +350,12 @@ public class GameActivity extends AppCompatActivity {
                 letterCollection[j] = " ";
             }
             letterCount = 0;
-            points = ( Integer.parseInt( words[1] ) );
 
-            total += points;
+            //points = ( Integer.parseInt( words[1] ) );
+            //total += points;
+            //score.setText("Total: " + total);
 
-            score.setText("Total: " + total);
-
-            if( points>1)
-                message.setText(String.format(getString(R.string.correct2), points));
-
-            else
-                message.setText(getString(R.string.correct1));
+            message.setText(getString(R.string.correct));
 
             //This pair removes the all word blocks
             for(View v : myTextViews)
