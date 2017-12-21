@@ -13,8 +13,8 @@
 
     <string name="standmes">Arrange the letters in the correct sequence</string>
     <string name="skipped">The last word was </string>
-    <string name="correct">That\'s right!</string>
-    <string name="incorrect">Sorry. That\'s not right, please try again.</string>
+    <string name="correct">That was right! Here is the next word</string>
+    <string name="incorrect">That\'s not right Please try again</string>
 
 
 

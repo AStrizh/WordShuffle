@@ -15,10 +15,6 @@ public class WordShuffle {
     private BufferedReader reader;
     private Context context;
 
-    //TODO: Adjust listlength to depend on difficulty
-    //private static int listLength = 200;
-
-
 
     public WordShuffle (int fileResource, Context context) throws IOException {
 
@@ -92,8 +88,6 @@ public class WordShuffle {
 
     private int RandLine() {
 
-        //TODO: Make a getLength method that gives listLength the size of the word list
-        //TODO:Make sure myMap.size() stays within bounds
         Random r = new Random();
         return r.nextInt(myMap.size()) + 1;
     }

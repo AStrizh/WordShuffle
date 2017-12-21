@@ -12,7 +12,7 @@ class Calculations {
 
     private static final int MIN_DISTANCE = 100;
 
-
+    //TODO: The two array shuffles need to be converted into one generic shuffle
     //Kunth shuffle to mix the letters of the word around
     static String[] shuffle ( String word ) {
 
@@ -30,7 +30,7 @@ class Calculations {
         return letters;
     }
 
-    //Kunth shuffle to mix and array of points
+    //Kunth shuffle to mix an array of points
     static PointF[] shuffle ( PointF[] positions ) {
 
         Random gen = new Random();

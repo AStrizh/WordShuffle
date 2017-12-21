@@ -365,7 +365,8 @@ public class GameActivity extends AppCompatActivity {
 
             taskBuilder();
 
-        }
+        } else
+            message.setText(getString(R.string.incorrect));
     }
 
 
