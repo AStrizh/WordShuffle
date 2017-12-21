@@ -16,7 +16,7 @@ public class WordShuffle {
     private Context context;
 
     //TODO: Adjust listlength to depend on difficulty
-    private static int listLength = 200;
+    //private static int listLength = 200;
 
 
 
@@ -31,7 +31,7 @@ public class WordShuffle {
     }
 
 
-    public String[] taskCreator(){
+    String[] taskCreator(){
 
         int linenumber = RandLine();
 
@@ -50,7 +50,7 @@ public class WordShuffle {
         //String rank = words[1];
 
         words[0] = "";
-        words[1] = "";
+        //words[1] = "";
 
         for(String s : words) {
             sb.append(" " + s);
@@ -90,10 +90,12 @@ public class WordShuffle {
     }
 
 
-    private static int RandLine() {
+    private int RandLine() {
 
+        //TODO: Make a getLength method that gives listLength the size of the word list
+        //TODO:Make sure myMap.size() stays within bounds
         Random r = new Random();
-        return r.nextInt(listLength) + 1;
+        return r.nextInt(myMap.size()) + 1;
     }
 
 

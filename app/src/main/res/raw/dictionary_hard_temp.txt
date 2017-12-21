@@ -1,300 +1,300 @@
-ABASHED 5 ~1. Embarrassed, disconcerted, or ashamed.
-ABHOR 5 ~1. To hate; to regard with disgust.
-ABRASIVE 5 ~1. Being rough and coarse in manner or disposition; causing irritation.
-ABROGATE 5 ~1. To put an end to; to do away with. ~2. To annul by an authoritative act; to repeal.
-ABSTAIN 5 ~1. Refrain from; to keep from doing, especially an indulgence of the passions or appetites.
-ABSTRUSE 5 ~1. Difficult to comprehend or understand; obscure; esoteric.  ~2. Concealed or hidden out of the way; secret.
-ACCOLADE 5 ~1. An expression of approval; praise. ~2. A special acknowledgment; an award.
-ACQUIESCE 5 ~1. Acceptance or consent by silence or by omitting to object. ~2. To go along or agree with, but with hesitation.
-ACRID 5 ~1. Sharp and harsh, or bitter and having unpleasant taste; pungent. ~2. Causing irritation; corrosive.
-ACUITY 5 ~1. Sharpness or acuteness, as of a needle, wit, etc.
-ACUMEN 5 ~1. Quickness of perception or discernment.
-ADAMANT 5 ~1. Of opinion: firm; unyielding; determined. ~2. An embodiment of impregnable hardness.
-ADROIT 5 ~1. Dexterous, deft or skillful.
-ADULATION 5 ~1. Flattery; praise.
-ADVERSITY 5 ~1. The state of misfortune or calamity. ~2. Being in a weakened position or lacking the resources and access of others.
-AFFABLE 5 ~1. Receiving others kindly and conversing with them in a free and friendly manner; courteous, sociable.
-AFFLUENCE 5 ~1. An abundant flow or supply. ~2. An abundance of wealth.
-ALACRITY 5 ~1. Eagerness; liveliness; enthusiasm. ~2. Promptness; speed.
-ALLAY 5 ~1. To make quiet or put at rest; to pacify or appease; to quell; to calm. ~2. To alleviate; to abate; to mitigate. ~3. To subside, become peaceful.
-ALLEVIATE 5 ~1. To make less severe, as a pain or difficulty.
-ALLUSION 5 ~1. An indirect reference; a reference to something supposed to be known, but not explicitly mentioned.
-ALOOF 5 ~1. Reserved and remote; either physically or emotionally distant.
-ALTRUISM 5 ~1. Devotion to the interests of others; kind regard for others.
-AMALGAM 5 ~1. A combination of different things.
-AMASS 5 ~1. To gather a great quantity of; to accumulate.
-AMBIGUITY 5 ~1. Something without clear meaning; possibly having multiple interpretations.
-AMIABLE 5 ~1. Friendly, kind, sweet; possessing sweetness of disposition.
-AMITY 5 ~1. Mutual understanding and a peaceful relationship, especially between nations; peace; accord.
-AMORPHOUS 5 ~1. Lacking a definite form or clear shape ~2. Being without definite character or nature.
-ANALOGOUS 5 ~1. Having correspondence to something else; bearing some resemblance or proportion.
-ANECDOTE 5 ~1. A short account of an incident, often humorous.
-ANIMOSITY 5 ~1. Violent hatred leading to active opposition.
-ANNEX 5 ~1. Addition or extension to a building. ~2. To add to the territory of a country or state, from a neighboring country or state, normally by military force.
-ANOMALOUS 5 ~1. Deviating from the normal; aberrant or abnormal. ~2. Of uncertain or unknown categorization.
-ANOMALY 5 ~1. A deviation from a rule or from what is regarded as normal. ~2. Something or someone that is strange or unusual. ~3. Any event or measurement that is out of the ordinary.
-ANTHOLOGY 5 ~1. A collection of literary works, such as poems or short stories. ~2. An assortment of things.
-APATHETIC 5 ~1. Void of feeling; not susceptible of deep emotion; passionless; indifferent.
-APATHY 5 ~1. Complete lack of emotion or motivation; lack of interest or enthusiasm.
-APPEASE 5 ~1. To calm; to dispel anger or hatred. ~2. To give in to the demands of.
-ARABLE 5 ~1. Suitable for cultivation, such as by ploughing.
-ARBOREAL 5 ~1. Of, relating to, or resembling a tree.
-ARCANE 5 ~1. Understood by only a few; obscure; requiring secret or mysterious knowledge.
-ARCHAIC 5 ~1. Of or characterized by antiquity; old-fashioned, quaint, antiquated. ~2. No longer in ordinary use, though still used occasionally to give a sense of antiquity.
-ARCHETYPE 5 ~1. An original model of which all other similar persons, objects, or concepts are merely derivative, copied, patterned, or emulated. ~2. An ideal example of something.
-ARDUOUS 5 ~1. Needing or using up much energy; testing powers of endurance. ~2. Difficult or exhausting to traverse.
-ARTIFICE 5 ~1. A trick played out as an ingenious, but artful, ruse. ~2. A strategic maneuver that uses some clever means to avoid detection or capture.
-ASCERTAIN 5 ~1. To find out definitely; to discover or establish.
-ASCETIC 5 ~1. Characterized by rigorous self-denial or self-discipline; withholding of physical pleasure.
-ASPERSION 5 ~1. An attack on someone's reputation.
-ASSIDUOUS 5 ~1. Hard-working, diligent, or industrious.
-ASSUAGE 5 ~1. To lessen the intensity of, to mitigate or relieve. ~2. To pacify or soothe.
-ASTUTE 5 ~1. Quickly and critically discerning. ~2. Shrewd or crafty.
-ATROPHY 5 ~1. A reduction in the functionality of an organ caused by disease, injury or lack of use. ~2. To wither or waste away.
-ATTENUATE 5 ~1. To reduce the amplitude of an electrical signal. ~2. To reduce in size, force, value, amount, or degree. ~3. To reduce the virulence of a bacteria or virus.
-AUGMENT 5 ~1. To increase; to make larger or supplement.
-AURAL 5 ~1. Of or pertaining to the ear. ~2. Of or pertaining to sound.
-AUSTERE 5 ~1. Grim or severe in manner or appearance. ~2. Lacking trivial decoration; not extravagant or gaudy.
-AVERSION 5 ~1. Opposition or repugnance of mind; fixed dislike. ~2. The act of turning away from an object.
-AVUNCULAR 5 ~1. In the manner of an uncle, pertaining to an uncle. ~2. Kind, genial, benevolent, or tolerant.
-AXIOM 5 ~1. A seemingly self-evident or necessary truth which is based on assumption. ~2. A fundamental theorem that serves as a basis for deduction of other theorems. ~3. An established principle in some artistic practice or science that is universally received.
-BANAL 5 ~1. Common in a boring way, to the point of being predictable; containing nothing new or fresh.
-BARRAGE 5 ~1. A heavy curtain of artillery fire. ~2. An overwhelming outburst of words, especially of criticism.
-BASTION 5 ~1. A well-fortified position; a stronghold or citadel. ~2. A person, or thing, who strongly defends some principle.
-BEFUDDLE 5 ~1. To perplex or confuse. ~2. To stupefy someone, especially with alcohol.
-BEGRUDGE 5 ~1. To be reluctant. ~2. To be envious or covetous.
-BEGUILE 5 ~1. To deceive or delude using guile. ~2. To charm, delight or captivate.
-BEHOOVE 5 ~1. To be necessary. ~2. To be in one's best interest.
-BELIE 5 ~1. To be shown false by contradicting something that was thought true; to conceal the contradictory or ironic presence of something.
-BELITTLE 5 ~1. To knowingly say that something is smaller or less important than it actually is.
-BELLICOSE 5 ~1. Warlike in nature; aggressive; hostile. ~2. Showing or having the impulse to be combative.
-BEMOAN 5 ~1. To complain about; to dismay or worry about something.
-BENIGN 5 ~1. Kind; gentle; mild. ~2. Not posing any serious threat to health; not particularly aggressive.
-BEQUEATH 5 ~1. To give or leave by will. ~2. To hand down; to transmit.
-BERATE 5 ~1. To chide or scold vehemently.
-BERET 5 ~1. A type of round, brimless cap with a soft top and a headband to secure it to the head; culturally associated with France. ~2. The same headgear ceremonially used by the military.
-BESTIAL 5 ~1. Like an animal. ~2. Cruel or savage in action.
-BILLOW 5 ~1. A large wave, swell, surge, or undulating mass of something, such as water, smoke, fabric or sound. ~2. To swell out or bulge.
-BLANCHED 5 ~1. Made to lose complexion or color. ~2. Turned pale (from shock).
-BLASPHEMY 5 ~1. The act of insulting or showing contempt or lack of reverence for any religion's deity or deities.
-BLATANTLY 5 ~1. In a highly visible manner, so as to be obvious.
-BLIGHT 5 ~1. Plant disease causing damage to, or the death of, leaves, fruit or other parts. ~2. Anything that impedes growth or development or spoils aspects of life.
-BLITHE 5 ~1. Happy and indifferent; careless; showing a lack of concern.
-BOLSTER 5 ~1. To brace, reinforce, secure, or support.
-BOMBAST 5 ~1. High-sounding words; an inflated style; language above the dignity of the occasion. ~2. To swell or fill out; to pad; to inflate.
-BOMBASTIC 5 ~1. Pompous or overly wordy. ~2. High-sounding but with little meaning. ~3. Inflated, overfilled.
-BOORISH 5 ~1. Behaving rough in manners; rude; uncultured.
-BRAGGART 5 ~1. Someone who boasts of their accomplishments often, and usually unsolicited.
-BRAWNY 5 ~1. Muscular; strong. ~2. Calloused; hardened.
-BREVITY 5 ~1. The quality of being brief in duration. ~2. Succinctness; conciseness.
-BRISTLE 5 ~1. A stiff or coarse hair. ~2. The hair or straws that make up a brush, broom, or similar item. ~3. To be on one's guard or raise one's defenses.
-BROACH 5 ~1. To open, to make an opening into; to pierce. ~2. To begin a discussion about something, usually not in eagerness.
-BRUSQUE 5 ~1. Rudely abrupt, unfriendly.
-BUCOLIC 5 ~1. Rustic, pastoral, country-styled. ~2. Pertaining to herdsmen or peasants.
-BULWARK 5 ~1. To fortify something with a wall or rampart. ~2. A defense or safeguard.
-BURGEON 5 ~1. To swell to the point of bursting.
-BURNISH 5 ~1. To make smooth or shiny by rubbing; to polish; to shine.
-BUTTRESS 5 ~1. To support something physically with a prop. ~2. A feature jutting prominently out from a mountain or rock; a crag, a bluff.
-CACOPHONY 5 ~1. A mix of discordant sounds; dissonance.
-CAJOLE 5 ~1. To persuade someone to do something which they are reluctant to do, often by flattery; to coax.
-CALLOUS 5 ~1. Emotionally hardened; unfeeling and indifferent to the suffering/feelings of others.
-CANDID 5 ~1. Not posed or rehearsed. ~2. Straightforward, open and sincere.
-CANDOR 5 ~1. Being sincere and open in speech; honesty in expression.
-CAPACIOUS 5 ~1. Having a lot of space inside; roomy.
-CASTIGATE 5 ~1. To punish severely; to criticize; to reprimand. ~2. To revise or make corrections to a publication.
-CATHARSIS 5 ~1. A release of emotional tension after an overwhelming experience. ~2. A purification or cleansing, especially emotional.
-CAUCUS 5 ~1. A meeting of persons belonging to a political party to discuss and decide on political affairs.
-CAUSTIC 5 ~1. Any substance which applied to organic tissue, burns, corrodes, or destroys it by chemical action. ~2. Sharp, bitter, cutting, biting.
-CENSURE 5 ~1. The act of blaming, criticizing, or condemning as wrong. ~2. An official reprimand.
-CEREBRAL 5 ~1. Of, or relating to the brain or mind. ~2. Intellectual rather than emotional.
-CERTITUDE 5 ~1. Sureness; something that is a guaranteed.
-CHICANERY 5 ~1. Deception by use of trickery, quibbling, or subterfuge. ~2. A slick performance by a lawyer.
-CHOLERIC 5 ~1. Easily becoming angry. ~2. Showing or expressing anger.
-CHURLISH 5 ~1. Rude, surly, ungracious. ~2. Stingy or grudging.
-CLAMOR 5 ~1. A great outcry; loud and continued shouting or exclamation. ~2. To cry out or demand.
-CLEMENCY 5 ~1. The gentle or kind exercise of power; leniency, mercy; compassion in judging or punishing.
-CLICHE 5 ~1. Something, most often a phrase or expression, that is overused or used outside its original context, so that its original impact and meaning are lost.
-COALESCE 5 ~1. To join into a single mass or whole. ~2. To form from different pieces or elements.
-CODDLE 5 ~1. To treat gently and kindly but to the point of being over protective.
-COERCE 5 ~1. To use force, threat, fraud, or intimidation in attempt to compel one to act against his will.
-COERCION 5 ~1. Actual or threatened force for the purpose of compelling action by another individual.
-COGENT 5 ~1. Reasonable and convincing; based on evidence. ~2. Appealing to the intellect or powers of reasoning.
-COGITATE 5 ~1. To meditate, to ponder, to think deeply. ~2. To consider, to devise.
-COHESIVE 5 ~1. Things bound together into a single unit.
-COLLAGE 5 ~1. A composite object or collection (abstract or concrete) created by the assemblage of various media; especially for a work of art such as text, film, or photographs.
-COLLATE 5 ~1. To examine diverse documents to discover similarities and differences. ~2. To assemble something in a logical sequence.
-COLLUSION 5 ~1. A secret agreement for an illegal purpose; conspiracy.
-COMELY 5 ~1. Pleasing or attractive to the eye.
-CONCISE 5 ~1. Brief, yet including all important information.
-CONCORD 5 ~1. A state of agreement; harmony; union. ~2. An agreeable combination of tones simultaneously heard; a consonant chord; consonance; harmony.
-CONCUR 5 ~1. To unite or agree; to have a common opinion; to coincide; to correspond. ~2. To meet in the same point.
-CONDONE 5 ~1. To forgive, excuse or overlook. ~2. To allow, accept, or permit.
-CONFOUND 5 ~1. To confuse; to mix up; to puzzle. ~2. To confuse right and wrong, and in the process, make something worse.
-CONGEAL 5 ~1. To make curdled or semi-solid as gel or jelly, solidify. ~2. To change from a liquid to solid state perhaps by cold.
-CONGENIAL 5 ~1. Suitable to one's needs, having the same or very similar nature, personality, etc. ~2. Friendly or sociable.
-CONTRITE 5 ~1. Feeling regret or sorrow, especially for one’s own actions.
-CONTUSION 5 ~1. A wound, such as a bruise, in which the skin is not broken; often having broken blood vessels and discoloration.
-CONUNDRUM 5 ~1. A difficult question or riddle, especially one using a play on words in the answer. ~2. A difficult choice or decision that must be made.
-CONVIVIAL 5 ~1. Of or relating to a feast or entertainment; festive; social; jovial.
-COPIOUS 5 ~1. Great in quantity or number, profuse, abundant. ~2. Exuberant in words, expression, or style.
-COROLLARY 5 ~1. Something given beyond what is actually due; something added or superfluous. ~2. A proposition which follows easily from the proof of another proposition.
-CORPULENT 5 ~1. Large in body; fat; overweight.
-COVERT 5 ~1. Secret; hidden,surreptitious, concealed.
-CREDENCE 5 ~1. Acceptance of a belief or claim as true, especially on the basis of evidence.
-CREDULITY 5 ~1. A willingness to believe in someone or something in the absence of reasonable proof.
-CREDULOUS 5 ~1. Excessively ready to believe things; gullible.
-CURSORY 5 ~1. Hasty; superficial; careless.
-CURTAIL 5 ~1. To shorten or abridge the duration of something; to truncate. ~2. To limit or restrict, keep in check.
-CYNICAL 5 ~1. Of or relating to the belief that human actions are motivated only or primarily by base desires or selfishness. ~2. Skeptical of the integrity, sincerity, or motives of others. ~3. Bitterly or jadedly distrustful or contemptuous.
-DALLIANCE 5 ~1. A sexual relationship, not serious but brief.
-DEARTH 5 ~1. Scarcity; a lack or short supply. ~2. The quality of being rare or costly.
-DEBACLE 5 ~1. An event or enterprise that ends suddenly and disastrously, often with humiliating consequences.
-DEBILITY 5 ~1. A state of physical or mental weakness.
-DECIPHER 5 ~1. To decode or decrypt a code to plain text. ~2. To read text that is almost illegible or obscure. ~3. To find a solution to a problem.
-DECOROUS 5 ~1. Marked by proper behavior.
-DECORUM 5 ~1. Appropriate social behavior; propriety.
-DECOY 5 ~1. A person or object meant to lure something to danger. ~2. A person or object used to distract an opponent or enemy by posing as their intended interest.
-DEFERENCE 5 ~1. Great respect. ~2. The willingness to carry out the wishes of others.
-DEFERMENT 5 ~1. An act or instance of putting off. ~2. Officially sanctioned postponement of compulsory military service.
-DEFOLIATE 5 ~1. Deprived of leaves.
-DEFUNCT 5 ~1. No longer in use, inactive. ~2. A program that has terminated or no longer able to function.
-DEMUR 5 ~1. To cause delay; to pause; to suspend proceedings or judgment in view of a doubt or difficulty.
-DEPLETE 5 ~1. To reduce by destroying or consuming the vitality or resource of the object.
-DEPLORE 5 ~1. To condemn; to express strong disapproval of.
-DEPRAVITY 5 ~1. The state or condition of moral debasement. ~2. A particular obscene act or trait.
-DEPRECATE 5 ~1. To declare something obsolete; to recommend against a function, technique, command, etc. that still works but has been replaced.
-DERAILED 5 ~1. Something forced to deviate from a set course or direction.
-DERELICT 5 ~1. Abandoned, forsaken; dilapidated, neglected. ~2. Negligent in performing a duty. ~3. Property abandoned by its former owner, especially a ship abandoned at sea.
-DERIDE 5 ~1. To harshly mock; ridicule.
-DESECRATE 5 ~1. To profane or violate the sacredness or sanctity of something.
-DESIST 5 ~1. To cease to proceed or act; to stop.
-DESOLATE 5 ~1. Deserted and devoid of inhabitants. ~2. Barren and lifeless. ~3. Made unfit for habitation or use.
-DESPOTIC 5 ~1. Acting or ruling tyrannically.
-DETERRENT 5 ~1. Serving to prevent something from happening.
-DETRITUS 5 ~1. Organic waste material from decomposing dead plants or animals.
-DEVIOUS 5 ~1. Not straightforward or honest. ~2. Withholding or manipulating information to one's own benefit and to the detriment of others.
-DEXTEROUS 5 ~1. Skillful with one's hands. ~2. Agile; flexible; able to move fluidly and gracefully.
-DICHOTOMY 5 ~1. A separation or division into two; a distinction that results in such a division. ~2. Such a division involving apparently incompatible or opposite principles; a duality.
-DICTUM 5 ~1. An authoritative statement; a dogmatic saying. ~2. The report of a judgment made by one of the judges who has given it.
-DIDACTIC 5 ~1. Instructive or intended to teach or demonstrate, especially with regard to morality. ~2. Excessively moralizing.
-DIFFIDENT 5 ~1. Lacking confidence in others; distrustful. ~2. Lacking confidence in one's self; distrustful of one's own powers.
-DIGRESS 5 ~1. To turn aside from the main subject of attention, or course of argument, in writing or speaking.
-DILATORY 5 ~1. Intentionally delaying, intended to gain time, or defer decision. ~2. Slow or tardy.
-DILIGENT 5 ~1. Performing with intense concentration, focus, responsible regard.
-DIORAMA 5 ~1. A three-dimensional display of a scenery, often having a painted background in front of which models are arranged.
-DIRGE 5 ~1. A mournful poem or piece of music composed or performed as a memorial to a dead person.
-DISARMING 5 ~1. Charming; likely to put someone at ease. ~2. Charm and congeniality that sooths and abates wrath or anxiety.
-DISCERN 5 ~1. To perceive, recognize, or comprehend with the mind. ~2. To distinguish something as being different from something else; to differentiate.
-DISCORD 5 ~1. Lack of agreement or harmony among persons. ~2. Tension or strife resulting from a lack of agreement. ~3. An inharmonious combination of simultaneously sounded tones; a dissonance.
-DISDAIN 5 ~1. A feeling of contempt or scorn; to regard with contempt.
-DISPARAGE 5 ~1. To match unequally; to degrade or dishonor. ~2. To dishonor by a comparison with what is inferior.
-DISPARITY 5 ~1. Being unequal; incongruity.
-DISSENT 5 ~1. To differ from, especially in opinion, beliefs, etc. ~2. Disagreement with the ideas, doctrines, decrees, etc. of a political party, government, or religion.
-DIURNAL 5 ~1. Happening or occurring during daylight, or primarily active during that time. ~2. Having a daily cycle that is completed every 24 hours, usually referring to tasks or processes.
-DIVERT 5 ~1. To turn from course; to force something to change it's direction. ~2. To distract.
-DOCILE 5 ~1. Yielding to control or supervision, direction, or management. ~2. Ready to accept instruction or direction.
-DOGMATIC 5 ~1. Adhering only to principles based on doctrine, rather than truths based on evidence or deduction.
-DRAWL 5 ~1. To drag on slowly and heavily. ~2. To utter or pronounce in a dull, spiritless tone, as if by dragging out the utterance.
-DRIVEL 5 ~1. Senseless talk; nonsense. ~2. To talk nonsense; to talk senselessly.
-DROLL 5 ~1. Oddly humorous; whimsical, amusing in a quaint way.
-DUBIOUS 5 ~1. Arousing doubt; questionable; open to suspicion. ~2. In disbelief; wavering, uncertain, or hesitating in opinion.
-EBULLIENT 5 ~1. Enthusiastic, high-spirited.
-ECCENTRIC 5 ~1. Deviating from the norm; behaving unexpectedly or unusually. ~2. Behaving in a manner that challenges convention; overly demonstrative.
-ECLECTIC 5 ~1. Selecting a mixture of what appears to be best of various doctrines, methods, or styles. ~2. Unrelated and unspecialized; heterogeneous.
-EDIFICE 5 ~1. A building; a structure; an architectural fabric, especially an imposing one.
-EFFACE 5 ~1. To cause to disappear as if by rubbing out or striking out. ~2. To erase (as anything impressed or inscribed upon a surface); to render illegible or indiscernible.
-EFFIGY 5 ~1. A dummy or other crude representation of a person, group or object that is hated. ~2. A likeness of a person.
-EFFUSIVE 5 ~1. Extravagant or excessive in emotional expression. ~2. Pouring, spilling out freely; overflowing.
-EGREGIOUS 5 ~1. Exceptional, conspicuous, outstanding, most usually in a negative fashion. ~2. Outrageously bad.
-EGRESS 5 ~1. An exit or way out. ~2. The process of exiting or leaving.
-ELICIT 5 ~1. To evoke emotions, feelings, responses, etc. ~2. To generate, obtain, or provoke as a response or answer.  ~3. To draw out, bring out, bring forth something latent.
-ELOQUENT 5 ~1. Fluently persuasive and articulate. ~2. Effective in expressing meaning by speech.
-ELUCIDATE 5 ~1. To make clear; to clarify; to shed light upon.
-ELUSIVE 5 ~1. Evading capture, comprehension, or remembrance.
-EMACIATED 5 ~1. Thin or haggard, especially from hunger or disease.
-EMBEZZLE 5 ~1. To steal or misappropriate money that one has been trusted with, especially to steal money from one's employer.
-EMBROIL 5 ~1. To draw into a negative situation; to cause to be involved.
-EMPIRIC 5 ~1. Derived from testable observations made using the physical senses, or using instruments which extend the senses.
-EMULATE 5 ~1. To attempt to equal or be the same as. ~2. To copy or imitate, especially a person.
-ENIGMA 5 ~1. Something puzzling, mysterious or inexplicable. ~2. A riddle, or a difficult problem.
-ENTOURAGE 5 ~1. A retinue of attendants, associates, or followers.
-ENUMERATE 5 ~1. To specify each member of a sequence individually in incrementing order. ~2. To determine the amount of.
-EPHEMERAL 5 ~1. Something which lasts for a short period of time.
-EPICURE 5 ~1. A person who is devoted to sensual pleasures or sensuous living. ~2. A person with highly refined tastes in food, wine, music etc.
-EPITOME 5 ~1. The embodiment or encapsulation of. ~2. A representative example. ~3. The height; the best.
-EQUITABLE 5 ~1. Relating to the general principles of justice that correct or supplement the provisions of the law.
-EQUIVOCAL 5 ~1. Having multiple interpretations; of doubtful meaning; ambiguous; uncertain. ~2. Capable of being ascribed to different motives or of signifying opposite feelings, purposes, or characters.
-ERRATIC 5 ~1. Prone to unexpected changes; not consistent.
-ERRONEOUS 5 ~1. Containing inaccuracies. ~2. Facts or data obtained from incomplete, incorrect, or misinterpreted information.
-ERUDITION 5 ~1. Profound knowledge, especially that based on learning and scholarship.
-ESOTERIC 5 ~1. Understood only by a chosen few or an enlightened inner circle. ~2. Having to do with concepts that are highly theoretical and without obvious practical application.
-ESPOUSE 5 ~1. To accept, support, or take on as one’s own (an idea or a cause).
-ETYMOLOGY 5 ~1. The study of the historical development of languages, particularly as manifested in individual words. ~2. An account of the origin and historical development of a word.
-EULOGY 5 ~1. An oration to honor a deceased person, usually at a funeral.
-EUPHEMISM 5 ~1. The use of a word or phrase, considered less offensive or vulgar, to replace another.
-EXCISE 5 ~1. To cut out or remove.
-EXCULPATE 5 ~1. To clear or free from guilt, or wrongdoing.
-EXECRABLE 5 ~1. Unlikable; of the poorest quality or taste (from a moral or artistic view).
-EXEGESIS 5 ~1. An exposition or explanation of a text, especially a religious one.
-EXEMPLARY 5 ~1. Deserving honor, respect, and admiration. ~2. Something worthy of being imitated.
-EXPEDIENT 5 ~1. Simple, easy, or quick; convenient. ~2. A method or means for achieving a particular result efficiently.
-EXPEDITE 5 ~1. To accelerate the progress of. ~2. To perform (a task) fast and efficiently.
-EXTANT 5 ~1. Still in existence. ~2. Currently existing; not having disappeared. ~3. Still alive; not extinct.
-EXTOL 5 ~1. To praise.
-EXTRADITE 5 ~1. To remove a person from one state to another by legal process.
-EXTRINSIC 5 ~1. External, separable from the object itself.
-FACETIOUS 5 ~1. Treating serious issues with deliberately inappropriate humor; flippant.\
-FALTER 5 ~1. To lose faith or vigor; to doubt or abandon a cause.
-FATHOM 5 ~1. To get to the bottom of; to manage to comprehend (a problem). ~2. Mental reach or scope; the extent of capacity; depth of thought or contrivance.
-FATUOUS 5 ~1. Obnoxiously stupid, vacantly silly, content in one's foolishness.
-FAWNING 5 ~1. To seek favor by flattery. ~2. To exhibit affection or attempt to please.
-FEASIBLE 5 ~1. Something that is possible to accomplish or create.
-FECUND 5 ~1. Highly fertile; able to produce offspring. ~2. Capable of leading to new ideas or innovation.
-FERVENT 5 ~1. Exhibiting particular enthusiasm, zeal, conviction, persistence, or belief.
-FERVOR 5 ~1. An intense, heated emotion; passion, ardor. ~2. A passionate enthusiasm for some cause.
-FICKLE 5 ~1. Quick to change one’s opinion or allegiance; insincere; not loyal or reliable.
-FIDELITY 5 ~1. Faithfulness to one's duties. ~2. Loyalty to one's spouse or partner. ~3. Accuracy, or exact correspondence to some given quality or fact.
-FILIAL 5 ~1. Pertaining to or befitting a son or daughter. ~2. The duties and attitudes expected of a child towards the parents.
-FINAGLE 5 ~1. To obtain, arrange, or achieve by indirect and usually deceitful methods.
-FINESSE 5 ~1. The property of having grace, elegance, skill, or balance. ~2. Skill in handling of a situation.
-FITFUL 5 ~1. Irregular; unsteady.
-FLAGRANT 5 ~1. Blatantly offensive, scandalous.
-FLAUNT 5 ~1. To wave or flutter in the wind. ~2. To parade, display with ostentation.
-FLIPPANT 5 ~1. Lacking respect or seriousness, showing levity.
-FLOUT 5 ~1. To express contempt for the rules. ~2. To scorn.
-FLUSTERED 5 ~1. Confused, befuddled, in a state of panic.
-FORAGING 5 ~1. The act of searching for food, usually of herbivores searching for food among tall grasses or trees.
-FORTITUDE 5 ~1. Mental or emotional strength that enables courage in the face of adversity.
-FRACTIOUS 5 ~1. Given to trouble-making. ~2. Irritable; argumentative; quarrelsome.
-FRIVOLOUS 5 ~1. Silly, especially at an inappropriate time or in an inappropriate manner. ~2. Of little weight or importance; not worth notice; slight.
-FRUGAL 5 ~1. Avoiding unnecessary expenditure of money or resources.
-FURROW 5 ~1. A deep wrinkle in the skin of the face, especially on someone's forehead.
-FURTIVE 5 ~1. Stealthy. ~2. Exhibiting guilty or evasive secrecy.
-FUTILE 5 ~1. Incapable of producing results; useless; not successful; not worth attempting.
-FUTILITY 5 ~1. Being impossible to complete or to produce a desired outcome. ~2. An action being done despite it having no useful results.
-GALLEON 5 ~1. A large, three masted, square rigged sailing ship with at least two decks.
-GAMBOL 5 ~1. To move about playfully; to frolic. ~2. An instance of running or skipping about playfully.
-GARBLE 5 ~1. To mutilate or pervert a passage, quotation, or account by additions and omissions rendering it incomprehensible.
-GARISH 5 ~1. Overly ostentatious; so colorful as to be in bad taste.
-GARNER 5 ~1. To accumulate or achieve a collection of (usually positive) objects or opinions.
-GARRULOUS 5 ~1. Excessively or tiresomely talkative. ~2. Excessively wordy and rambling.
-GAUNT 5 ~1. Lean, angular, and bony. ~2. Haggard, drawn, and emaciated. ~3. Bleak, barren, and desolate.
-GERMANE 5 ~1. Related to the topic being discussed or considered.
-GERMINAL 5 ~1. Pertaining to something very small; pertaining to the essence of something.
-GRANDIOSE 5 ~1. Large and impressive, in size, scope or extent. ~2. Pompous or pretentious.
-GRATING 5 ~1. Harsh and unpleasant. ~2. A barrier that has parallel or crossed bars blocking a passage but admitting air.
-GRATIS 5 ~1. Free, without charge.
-GUFFAW 5 ~1. A boisterous laugh.
-GUILE 5 ~1. Deceptiveness, deceit, fraud, duplicity, dishonesty.
-GULLIBLE 5 ~1. Easily deceived or duped; naïve, easily cheated or fooled.
-GUSTATORY 5 ~1. Of, or relating to, the sense of taste.
-HACKNEYED 5 ~1. Repeated too often.
-HALLOWED 5 ~1. Consecrated or sanctified; sacred, holy.
-HAMPER 5 ~1. A large basket, usually with a cover, used for the packing and carrying of articles or small animals. ~2. To impede in motion or progress; to encumber.
-HARANGUE 5 ~1. An impassioned public speech. ~2. A tirade or rant, whether spoken or written. ~3. To give a forceful and lengthy lecture or criticism to someone.
-HARBORED 5 ~1. To hold or persistently entertain in one's thoughts or mind. ~2.  A sheltered expanse of water, adjacent to land, in which ships may dock or anchor.
-HASTEN 5 ~1. To move in a quick fashion. ~2. To make someone speed up or make something happen quicker.
-HAUGHTY 5 ~1. Conveying in demeanor the assumption of superiority; disdainful, supercilious.
-HOARY 5 ~1. White or gray with age. ~2. Remote in time past. of a pale silvery gray. ~3. Old, or old-fashioned.
-HOLISTIC 5 ~1. Relating to a study of a subject as a concrete whole (instead of a separating into distinct parts and studying each individually).
-HUBRIS 5 ~1. Excessive pride, presumption or arrogance (originally toward the gods).
+ABASHED ~1. Embarrassed, disconcerted, or ashamed.
+ABHOR ~1. To hate; to regard with disgust.
+ABRASIVE ~1. Being rough and coarse in manner or disposition; causing irritation.
+ABROGATE ~1. To put an end to; to do away with. ~2. To annul by an authoritative act; to repeal.
+ABSTAIN ~1. Refrain from; to keep from doing, especially an indulgence of the passions or appetites.
+ABSTRUSE ~1. Difficult to comprehend or understand; obscure; esoteric.  ~2. Concealed or hidden out of the way; secret.
+ACCOLADE ~1. An expression of approval; praise. ~2. A special acknowledgment; an award.
+ACQUIESCE ~1. Acceptance or consent by silence or by omitting to object. ~2. To go along or agree with, but with hesitation.
+ACRID ~1. Sharp and harsh, or bitter and having unpleasant taste; pungent. ~2. Causing irritation; corrosive.
+ACUITY ~1. Sharpness or acuteness, as of a needle, wit, etc.
+ACUMEN ~1. Quickness of perception or discernment.
+ADAMANT ~1. Of opinion: firm; unyielding; determined. ~2. An embodiment of impregnable hardness.
+ADROIT ~1. Dexterous, deft or skillful.
+ADULATION ~1. Flattery; praise.
+ADVERSITY ~1. The state of misfortune or calamity. ~2. Being in a weakened position or lacking the resources and access of others.
+AFFABLE ~1. Receiving others kindly and conversing with them in a free and friendly manner; courteous, sociable.
+AFFLUENCE ~1. An abundant flow or supply. ~2. An abundance of wealth.
+ALACRITY ~1. Eagerness; liveliness; enthusiasm. ~2. Promptness; speed.
+ALLAY ~1. To make quiet or put at rest; to pacify or appease; to quell; to calm. ~2. To alleviate; to abate; to mitigate. ~3. To subside, become peaceful.
+ALLEVIATE ~1. To make less severe, as a pain or difficulty.
+ALLUSION ~1. An indirect reference; a reference to something supposed to be known, but not explicitly mentioned.
+ALOOF ~1. Reserved and remote; either physically or emotionally distant.
+ALTRUISM ~1. Devotion to the interests of others; kind regard for others.
+AMALGAM ~1. A combination of different things.
+AMASS ~1. To gather a great quantity of; to accumulate.
+AMBIGUITY ~1. Something without clear meaning; possibly having multiple interpretations.
+AMIABLE ~1. Friendly, kind, sweet; possessing sweetness of disposition.
+AMITY ~1. Mutual understanding and a peaceful relationship, especially between nations; peace; accord.
+AMORPHOUS ~1. Lacking a definite form or clear shape ~2. Being without definite character or nature.
+ANALOGOUS ~1. Having correspondence to something else; bearing some resemblance or proportion.
+ANECDOTE ~1. A short account of an incident, often humorous.
+ANIMOSITY ~1. Violent hatred leading to active opposition.
+ANNEX ~1. Addition or extension to a building. ~2. To add to the territory of a country or state, from a neighboring country or state, normally by military force.
+ANOMALOUS ~1. Deviating from the normal; aberrant or abnormal. ~2. Of uncertain or unknown categorization.
+ANOMALY ~1. A deviation from a rule or from what is regarded as normal. ~2. Something or someone that is strange or unusual. ~3. Any event or measurement that is out of the ordinary.
+ANTHOLOGY ~1. A collection of literary works, such as poems or short stories. ~2. An assortment of things.
+APATHETIC ~1. Void of feeling; not susceptible of deep emotion; passionless; indifferent.
+APATHY ~1. Complete lack of emotion or motivation; lack of interest or enthusiasm.
+APPEASE ~1. To calm; to dispel anger or hatred. ~2. To give in to the demands of.
+ARABLE ~1. Suitable for cultivation, such as by ploughing.
+ARBOREAL ~1. Of, relating to, or resembling a tree.
+ARCANE ~1. Understood by only a few; obscure; requiring secret or mysterious knowledge.
+ARCHAIC ~1. Of or characterized by antiquity; old-fashioned, quaint, antiquated. ~2. No longer in ordinary use, though still used occasionally to give a sense of antiquity.
+ARCHETYPE ~1. An original model of which all other similar persons, objects, or concepts are merely derivative, copied, patterned, or emulated. ~2. An ideal example of something.
+ARDUOUS ~1. Needing or using up much energy; testing powers of endurance. ~2. Difficult or exhausting to traverse.
+ARTIFICE ~1. A trick played out as an ingenious, but artful, ruse. ~2. A strategic maneuver that uses some clever means to avoid detection or capture.
+ASCERTAIN ~1. To find out definitely; to discover or establish.
+ASCETIC ~1. Characterized by rigorous self-denial or self-discipline; withholding of physical pleasure.
+ASPERSION ~1. An attack on someone's reputation.
+ASSIDUOUS ~1. Hard-working, diligent, or industrious.
+ASSUAGE ~1. To lessen the intensity of, to mitigate or relieve. ~2. To pacify or soothe.
+ASTUTE ~1. Quickly and critically discerning. ~2. Shrewd or crafty.
+ATROPHY ~1. A reduction in the functionality of an organ caused by disease, injury or lack of use. ~2. To wither or waste away.
+ATTENUATE ~1. To reduce the amplitude of an electrical signal. ~2. To reduce in size, force, value, amount, or degree. ~3. To reduce the virulence of a bacteria or virus.
+AUGMENT ~1. To increase; to make larger or supplement.
+AURAL ~1. Of or pertaining to the ear. ~2. Of or pertaining to sound.
+AUSTERE ~1. Grim or severe in manner or appearance. ~2. Lacking trivial decoration; not extravagant or gaudy.
+AVERSION ~1. Opposition or repugnance of mind; fixed dislike. ~2. The act of turning away from an object.
+AVUNCULAR ~1. In the manner of an uncle, pertaining to an uncle. ~2. Kind, genial, benevolent, or tolerant.
+AXIOM ~1. A seemingly self-evident or necessary truth which is based on assumption. ~2. A fundamental theorem that serves as a basis for deduction of other theorems. ~3. An established principle in some artistic practice or science that is universally received.
+BANAL ~1. Common in a boring way, to the point of being predictable; containing nothing new or fresh.
+BARRAGE ~1. A heavy curtain of artillery fire. ~2. An overwhelming outburst of words, especially of criticism.
+BASTION ~1. A well-fortified position; a stronghold or citadel. ~2. A person, or thing, who strongly defends some principle.
+BEFUDDLE ~1. To perplex or confuse. ~2. To stupefy someone, especially with alcohol.
+BEGRUDGE ~1. To be reluctant. ~2. To be envious or covetous.
+BEGUILE ~1. To deceive or delude using guile. ~2. To charm, delight or captivate.
+BEHOOVE ~1. To be necessary. ~2. To be in one's best interest.
+BELIE ~1. To be shown false by contradicting something that was thought true; to conceal the contradictory or ironic presence of something.
+BELITTLE ~1. To knowingly say that something is smaller or less important than it actually is.
+BELLICOSE ~1. Warlike in nature; aggressive; hostile. ~2. Showing or having the impulse to be combative.
+BEMOAN ~1. To complain about; to dismay or worry about something.
+BENIGN ~1. Kind; gentle; mild. ~2. Not posing any serious threat to health; not particularly aggressive.
+BEQUEATH ~1. To give or leave by will. ~2. To hand down; to transmit.
+BERATE ~1. To chide or scold vehemently.
+BERET ~1. A type of round, brimless cap with a soft top and a headband to secure it to the head; culturally associated with France. ~2. The same headgear ceremonially used by the military.
+BESTIAL ~1. Like an animal. ~2. Cruel or savage in action.
+BILLOW ~1. A large wave, swell, surge, or undulating mass of something, such as water, smoke, fabric or sound. ~2. To swell out or bulge.
+BLANCHED ~1. Made to lose complexion or color. ~2. Turned pale (from shock).
+BLASPHEMY ~1. The act of insulting or showing contempt or lack of reverence for any religion's deity or deities.
+BLATANTLY ~1. In a highly visible manner, so as to be obvious.
+BLIGHT ~1. Plant disease causing damage to, or the death of, leaves, fruit or other parts. ~2. Anything that impedes growth or development or spoils aspects of life.
+BLITHE ~1. Happy and indifferent; careless; showing a lack of concern.
+BOLSTER ~1. To brace, reinforce, secure, or support.
+BOMBAST ~1. High-sounding words; an inflated style; language above the dignity of the occasion. ~2. To swell or fill out; to pad; to inflate.
+BOMBASTIC ~1. Pompous or overly wordy. ~2. High-sounding but with little meaning. ~3. Inflated, overfilled.
+BOORISH ~1. Behaving rough in manners; rude; uncultured.
+BRAGGART ~1. Someone who boasts of their accomplishments often, and usually unsolicited.
+BRAWNY ~1. Muscular; strong. ~2. Calloused; hardened.
+BREVITY ~1. The quality of being brief in duration. ~2. Succinctness; conciseness.
+BRISTLE ~1. A stiff or coarse hair. ~2. The hair or straws that make up a brush, broom, or similar item. ~3. To be on one's guard or raise one's defenses.
+BROACH ~1. To open, to make an opening into; to pierce. ~2. To begin a discussion about something, usually not in eagerness.
+BRUSQUE ~1. Rudely abrupt, unfriendly.
+BUCOLIC ~1. Rustic, pastoral, country-styled. ~2. Pertaining to herdsmen or peasants.
+BULWARK ~1. To fortify something with a wall or rampart. ~2. A defense or safeguard.
+BURGEON ~1. To swell to the point of bursting.
+BURNISH ~1. To make smooth or shiny by rubbing; to polish; to shine.
+BUTTRESS ~1. To support something physically with a prop. ~2. A feature jutting prominently out from a mountain or rock; a crag, a bluff.
+CACOPHONY ~1. A mix of discordant sounds; dissonance.
+CAJOLE ~1. To persuade someone to do something which they are reluctant to do, often by flattery; to coax.
+CALLOUS ~1. Emotionally hardened; unfeeling and indifferent to the suffering/feelings of others.
+CANDID ~1. Not posed or rehearsed. ~2. Straightforward, open and sincere.
+CANDOR ~1. Being sincere and open in speech; honesty in expression.
+CAPACIOUS ~1. Having a lot of space inside; roomy.
+CASTIGATE ~1. To punish severely; to criticize; to reprimand. ~2. To revise or make corrections to a publication.
+CATHARSIS ~1. A release of emotional tension after an overwhelming experience. ~2. A purification or cleansing, especially emotional.
+CAUCUS ~1. A meeting of persons belonging to a political party to discuss and decide on political affairs.
+CAUSTIC ~1. Any substance which applied to organic tissue, burns, corrodes, or destroys it by chemical action. ~2. Sharp, bitter, cutting, biting.
+CENSURE ~1. The act of blaming, criticizing, or condemning as wrong. ~2. An official reprimand.
+CEREBRAL ~1. Of, or relating to the brain or mind. ~2. Intellectual rather than emotional.
+CERTITUDE ~1. Sureness; something that is a guaranteed.
+CHICANERY ~1. Deception by use of trickery, quibbling, or subterfuge. ~2. A slick performance by a lawyer.
+CHOLERIC ~1. Easily becoming angry. ~2. Showing or expressing anger.
+CHURLISH ~1. Rude, surly, ungracious. ~2. Stingy or grudging.
+CLAMOR ~1. A great outcry; loud and continued shouting or exclamation. ~2. To cry out or demand.
+CLEMENCY ~1. The gentle or kind exercise of power; leniency, mercy; compassion in judging or punishing.
+CLICHE ~1. Something, most often a phrase or expression, that is overused or used outside its original context, so that its original impact and meaning are lost.
+COALESCE ~1. To join into a single mass or whole. ~2. To form from different pieces or elements.
+CODDLE ~1. To treat gently and kindly but to the point of being over protective.
+COERCE ~1. To use force, threat, fraud, or intimidation in attempt to compel one to act against his will.
+COERCION ~1. Actual or threatened force for the purpose of compelling action by another individual.
+COGENT ~1. Reasonable and convincing; based on evidence. ~2. Appealing to the intellect or powers of reasoning.
+COGITATE ~1. To meditate, to ponder, to think deeply. ~2. To consider, to devise.
+COHESIVE ~1. Things bound together into a single unit.
+COLLAGE ~1. A composite object or collection (abstract or concrete) created by the assemblage of various media; especially for a work of art such as text, film, or photographs.
+COLLATE ~1. To examine diverse documents to discover similarities and differences. ~2. To assemble something in a logical sequence.
+COLLUSION ~1. A secret agreement for an illegal purpose; conspiracy.
+COMELY ~1. Pleasing or attractive to the eye.
+CONCISE ~1. Brief, yet including all important information.
+CONCORD ~1. A state of agreement; harmony; union. ~2. An agreeable combination of tones simultaneously heard; a consonant chord; consonance; harmony.
+CONCUR ~1. To unite or agree; to have a common opinion; to coincide; to correspond. ~2. To meet in the same point.
+CONDONE ~1. To forgive, excuse or overlook. ~2. To allow, accept, or permit.
+CONFOUND ~1. To confuse; to mix up; to puzzle. ~2. To confuse right and wrong, and in the process, make something worse.
+CONGEAL ~1. To make curdled or semi-solid as gel or jelly, solidify. ~2. To change from a liquid to solid state perhaps by cold.
+CONGENIAL ~1. Suitable to one's needs, having the same or very similar nature, personality, etc. ~2. Friendly or sociable.
+CONTRITE ~1. Feeling regret or sorrow, especially for one’s own actions.
+CONTUSION ~1. A wound, such as a bruise, in which the skin is not broken; often having broken blood vessels and discoloration.
+CONUNDRUM ~1. A difficult question or riddle, especially one using a play on words in the answer. ~2. A difficult choice or decision that must be made.
+CONVIVIAL ~1. Of or relating to a feast or entertainment; festive; social; jovial.
+COPIOUS ~1. Great in quantity or number, profuse, abundant. ~2. Exuberant in words, expression, or style.
+COROLLARY ~1. Something given beyond what is actually due; something added or superfluous. ~2. A proposition which follows easily from the proof of another proposition.
+CORPULENT ~1. Large in body; fat; overweight.
+COVERT ~1. Secret; hidden,surreptitious, concealed.
+CREDENCE ~1. Acceptance of a belief or claim as true, especially on the basis of evidence.
+CREDULITY ~1. A willingness to believe in someone or something in the absence of reasonable proof.
+CREDULOUS ~1. Excessively ready to believe things; gullible.
+CURSORY ~1. Hasty; superficial; careless.
+CURTAIL ~1. To shorten or abridge the duration of something; to truncate. ~2. To limit or restrict, keep in check.
+CYNICAL ~1. Of or relating to the belief that human actions are motivated only or primarily by base desires or selfishness. ~2. Skeptical of the integrity, sincerity, or motives of others. ~3. Bitterly or jadedly distrustful or contemptuous.
+DALLIANCE ~1. A sexual relationship, not serious but brief.
+DEARTH ~1. Scarcity; a lack or short supply. ~2. The quality of being rare or costly.
+DEBACLE ~1. An event or enterprise that ends suddenly and disastrously, often with humiliating consequences.
+DEBILITY ~1. A state of physical or mental weakness.
+DECIPHER ~1. To decode or decrypt a code to plain text. ~2. To read text that is almost illegible or obscure. ~3. To find a solution to a problem.
+DECOROUS ~1. Marked by proper behavior.
+DECORUM ~1. Appropriate social behavior; propriety.
+DECOY ~1. A person or object meant to lure something to danger. ~2. A person or object used to distract an opponent or enemy by posing as their intended interest.
+DEFERENCE ~1. Great respect. ~2. The willingness to carry out the wishes of others.
+DEFERMENT ~1. An act or instance of putting off. ~2. Officially sanctioned postponement of compulsory military service.
+DEFOLIATE ~1. Deprived of leaves.
+DEFUNCT ~1. No longer in use, inactive. ~2. A program that has terminated or no longer able to function.
+DEMUR ~1. To cause delay; to pause; to suspend proceedings or judgment in view of a doubt or difficulty.
+DEPLETE ~1. To reduce by destroying or consuming the vitality or resource of the object.
+DEPLORE ~1. To condemn; to express strong disapproval of.
+DEPRAVITY ~1. The state or condition of moral debasement. ~2. A particular obscene act or trait.
+DEPRECATE ~1. To declare something obsolete; to recommend against a function, technique, command, etc. that still works but has been replaced.
+DERAILED ~1. Something forced to deviate from a set course or direction.
+DERELICT ~1. Abandoned, forsaken; dilapidated, neglected. ~2. Negligent in performing a duty. ~3. Property abandoned by its former owner, especially a ship abandoned at sea.
+DERIDE ~1. To harshly mock; ridicule.
+DESECRATE ~1. To profane or violate the sacredness or sanctity of something.
+DESIST ~1. To cease to proceed or act; to stop.
+DESOLATE ~1. Deserted and devoid of inhabitants. ~2. Barren and lifeless. ~3. Made unfit for habitation or use.
+DESPOTIC ~1. Acting or ruling tyrannically.
+DETERRENT ~1. Serving to prevent something from happening.
+DETRITUS ~1. Organic waste material from decomposing dead plants or animals.
+DEVIOUS ~1. Not straightforward or honest. ~2. Withholding or manipulating information to one's own benefit and to the detriment of others.
+DEXTEROUS ~1. Skillful with one's hands. ~2. Agile; flexible; able to move fluidly and gracefully.
+DICHOTOMY ~1. A separation or division into two; a distinction that results in such a division. ~2. Such a division involving apparently incompatible or opposite principles; a duality.
+DICTUM ~1. An authoritative statement; a dogmatic saying. ~2. The report of a judgment made by one of the judges who has given it.
+DIDACTIC ~1. Instructive or intended to teach or demonstrate, especially with regard to morality. ~2. Excessively moralizing.
+DIFFIDENT ~1. Lacking confidence in others; distrustful. ~2. Lacking confidence in one's self; distrustful of one's own powers.
+DIGRESS ~1. To turn aside from the main subject of attention, or course of argument, in writing or speaking.
+DILATORY ~1. Intentionally delaying, intended to gain time, or defer decision. ~2. Slow or tardy.
+DILIGENT ~1. Performing with intense concentration, focus, responsible regard.
+DIORAMA ~1. A three-dimensional display of a scenery, often having a painted background in front of which models are arranged.
+DIRGE ~1. A mournful poem or piece of music composed or performed as a memorial to a dead person.
+DISARMING ~1. Charming; likely to put someone at ease. ~2. Charm and congeniality that sooths and abates wrath or anxiety.
+DISCERN ~1. To perceive, recognize, or comprehend with the mind. ~2. To distinguish something as being different from something else; to differentiate.
+DISCORD ~1. Lack of agreement or harmony among persons. ~2. Tension or strife resulting from a lack of agreement. ~3. An inharmonious combination of simultaneously sounded tones; a dissonance.
+DISDAIN ~1. A feeling of contempt or scorn; to regard with contempt.
+DISPARAGE ~1. To match unequally; to degrade or dishonor. ~2. To dishonor by a comparison with what is inferior.
+DISPARITY ~1. Being unequal; incongruity.
+DISSENT ~1. To differ from, especially in opinion, beliefs, etc. ~2. Disagreement with the ideas, doctrines, decrees, etc. of a political party, government, or religion.
+DIURNAL ~1. Happening or occurring during daylight, or primarily active during that time. ~2. Having a daily cycle that is completed every 24 hours, usually referring to tasks or processes.
+DIVERT ~1. To turn from course; to force something to change it's direction. ~2. To distract.
+DOCILE ~1. Yielding to control or supervision, direction, or management. ~2. Ready to accept instruction or direction.
+DOGMATIC ~1. Adhering only to principles based on doctrine, rather than truths based on evidence or deduction.
+DRAWL ~1. To drag on slowly and heavily. ~2. To utter or pronounce in a dull, spiritless tone, as if by dragging out the utterance.
+DRIVEL ~1. Senseless talk; nonsense. ~2. To talk nonsense; to talk senselessly.
+DROLL ~1. Oddly humorous; whimsical, amusing in a quaint way.
+DUBIOUS ~1. Arousing doubt; questionable; open to suspicion. ~2. In disbelief; wavering, uncertain, or hesitating in opinion.
+EBULLIENT ~1. Enthusiastic, high-spirited.
+ECCENTRIC ~1. Deviating from the norm; behaving unexpectedly or unusually. ~2. Behaving in a manner that challenges convention; overly demonstrative.
+ECLECTIC ~1. Selecting a mixture of what appears to be best of various doctrines, methods, or styles. ~2. Unrelated and unspecialized; heterogeneous.
+EDIFICE ~1. A building; a structure; an architectural fabric, especially an imposing one.
+EFFACE ~1. To cause to disappear as if by rubbing out or striking out. ~2. To erase (as anything impressed or inscribed upon a surface); to render illegible or indiscernible.
+EFFIGY ~1. A dummy or other crude representation of a person, group or object that is hated. ~2. A likeness of a person.
+EFFUSIVE ~1. Extravagant or excessive in emotional expression. ~2. Pouring, spilling out freely; overflowing.
+EGREGIOUS ~1. Exceptional, conspicuous, outstanding, most usually in a negative fashion. ~2. Outrageously bad.
+EGRESS ~1. An exit or way out. ~2. The process of exiting or leaving.
+ELICIT ~1. To evoke emotions, feelings, responses, etc. ~2. To generate, obtain, or provoke as a response or answer.  ~3. To draw out, bring out, bring forth something latent.
+ELOQUENT ~1. Fluently persuasive and articulate. ~2. Effective in expressing meaning by speech.
+ELUCIDATE ~1. To make clear; to clarify; to shed light upon.
+ELUSIVE ~1. Evading capture, comprehension, or remembrance.
+EMACIATED ~1. Thin or haggard, especially from hunger or disease.
+EMBEZZLE ~1. To steal or misappropriate money that one has been trusted with, especially to steal money from one's employer.
+EMBROIL ~1. To draw into a negative situation; to cause to be involved.
+EMPIRIC ~1. Derived from testable observations made using the physical senses, or using instruments which extend the senses.
+EMULATE ~1. To attempt to equal or be the same as. ~2. To copy or imitate, especially a person.
+ENIGMA ~1. Something puzzling, mysterious or inexplicable. ~2. A riddle, or a difficult problem.
+ENTOURAGE ~1. A retinue of attendants, associates, or followers.
+ENUMERATE ~1. To specify each member of a sequence individually in incrementing order. ~2. To determine the amount of.
+EPHEMERAL ~1. Something which lasts for a short period of time.
+EPICURE ~1. A person who is devoted to sensual pleasures or sensuous living. ~2. A person with highly refined tastes in food, wine, music etc.
+EPITOME ~1. The embodiment or encapsulation of. ~2. A representative example. ~3. The height; the best.
+EQUITABLE ~1. Relating to the general principles of justice that correct or supplement the provisions of the law.
+EQUIVOCAL ~1. Having multiple interpretations; of doubtful meaning; ambiguous; uncertain. ~2. Capable of being ascribed to different motives or of signifying opposite feelings, purposes, or characters.
+ERRATIC ~1. Prone to unexpected changes; not consistent.
+ERRONEOUS ~1. Containing inaccuracies. ~2. Facts or data obtained from incomplete, incorrect, or misinterpreted information.
+ERUDITION ~1. Profound knowledge, especially that based on learning and scholarship.
+ESOTERIC ~1. Understood only by a chosen few or an enlightened inner circle. ~2. Having to do with concepts that are highly theoretical and without obvious practical application.
+ESPOUSE ~1. To accept, support, or take on as one’s own (an idea or a cause).
+ETYMOLOGY ~1. The study of the historical development of languages, particularly as manifested in individual words. ~2. An account of the origin and historical development of a word.
+EULOGY ~1. An oration to honor a deceased person, usually at a funeral.
+EUPHEMISM ~1. The use of a word or phrase, considered less offensive or vulgar, to replace another.
+EXCISE ~1. To cut out or remove.
+EXCULPATE ~1. To clear or free from guilt, or wrongdoing.
+EXECRABLE ~1. Unlikable; of the poorest quality or taste (from a moral or artistic view).
+EXEGESIS ~1. An exposition or explanation of a text, especially a religious one.
+EXEMPLARY ~1. Deserving honor, respect, and admiration. ~2. Something worthy of being imitated.
+EXPEDIENT ~1. Simple, easy, or quick; convenient. ~2. A method or means for achieving a particular result efficiently.
+EXPEDITE ~1. To accelerate the progress of. ~2. To perform (a task) fast and efficiently.
+EXTANT ~1. Still in existence. ~2. Currently existing; not having disappeared. ~3. Still alive; not extinct.
+EXTOL ~1. To praise.
+EXTRADITE ~1. To remove a person from one state to another by legal process.
+EXTRINSIC ~1. External, separable from the object itself.
+FACETIOUS ~1. Treating serious issues with deliberately inappropriate humor; flippant.\
+FALTER ~1. To lose faith or vigor; to doubt or abandon a cause.
+FATHOM ~1. To get to the bottom of; to manage to comprehend (a problem). ~2. Mental reach or scope; the extent of capacity; depth of thought or contrivance.
+FATUOUS ~1. Obnoxiously stupid, vacantly silly, content in one's foolishness.
+FAWNING ~1. To seek favor by flattery. ~2. To exhibit affection or attempt to please.
+FEASIBLE ~1. Something that is possible to accomplish or create.
+FECUND ~1. Highly fertile; able to produce offspring. ~2. Capable of leading to new ideas or innovation.
+FERVENT ~1. Exhibiting particular enthusiasm, zeal, conviction, persistence, or belief.
+FERVOR ~1. An intense, heated emotion; passion, ardor. ~2. A passionate enthusiasm for some cause.
+FICKLE ~1. Quick to change one’s opinion or allegiance; insincere; not loyal or reliable.
+FIDELITY ~1. Faithfulness to one's duties. ~2. Loyalty to one's spouse or partner. ~3. Accuracy, or exact correspondence to some given quality or fact.
+FILIAL ~1. Pertaining to or befitting a son or daughter. ~2. The duties and attitudes expected of a child towards the parents.
+FINAGLE ~1. To obtain, arrange, or achieve by indirect and usually deceitful methods.
+FINESSE ~1. The property of having grace, elegance, skill, or balance. ~2. Skill in handling of a situation.
+FITFUL ~1. Irregular; unsteady.
+FLAGRANT ~1. Blatantly offensive, scandalous.
+FLAUNT ~1. To wave or flutter in the wind. ~2. To parade, display with ostentation.
+FLIPPANT ~1. Lacking respect or seriousness, showing levity.
+FLOUT ~1. To express contempt for the rules. ~2. To scorn.
+FLUSTERED ~1. Confused, befuddled, in a state of panic.
+FORAGING ~1. The act of searching for food, usually of herbivores searching for food among tall grasses or trees.
+FORTITUDE ~1. Mental or emotional strength that enables courage in the face of adversity.
+FRACTIOUS ~1. Given to trouble-making. ~2. Irritable; argumentative; quarrelsome.
+FRIVOLOUS ~1. Silly, especially at an inappropriate time or in an inappropriate manner. ~2. Of little weight or importance; not worth notice; slight.
+FRUGAL ~1. Avoiding unnecessary expenditure of money or resources.
+FURROW ~1. A deep wrinkle in the skin of the face, especially on someone's forehead.
+FURTIVE ~1. Stealthy. ~2. Exhibiting guilty or evasive secrecy.
+FUTILE ~1. Incapable of producing results; useless; not successful; not worth attempting.
+FUTILITY ~1. Being impossible to complete or to produce a desired outcome. ~2. An action being done despite it having no useful results.
+GALLEON ~1. A large, three masted, square rigged sailing ship with at least two decks.
+GAMBOL ~1. To move about playfully; to frolic. ~2. An instance of running or skipping about playfully.
+GARBLE ~1. To mutilate or pervert a passage, quotation, or account by additions and omissions rendering it incomprehensible.
+GARISH ~1. Overly ostentatious; so colorful as to be in bad taste.
+GARNER ~1. To accumulate or achieve a collection of (usually positive) objects or opinions.
+GARRULOUS ~1. Excessively or tiresomely talkative. ~2. Excessively wordy and rambling.
+GAUNT ~1. Lean, angular, and bony. ~2. Haggard, drawn, and emaciated. ~3. Bleak, barren, and desolate.
+GERMANE ~1. Related to the topic being discussed or considered.
+GERMINAL ~1. Pertaining to something very small; pertaining to the essence of something.
+GRANDIOSE ~1. Large and impressive, in size, scope or extent. ~2. Pompous or pretentious.
+GRATING ~1. Harsh and unpleasant. ~2. A barrier that has parallel or crossed bars blocking a passage but admitting air.
+GRATIS ~1. Free, without charge.
+GUFFAW ~1. A boisterous laugh.
+GUILE ~1. Deceptiveness, deceit, fraud, duplicity, dishonesty.
+GULLIBLE ~1. Easily deceived or duped; naïve, easily cheated or fooled.
+GUSTATORY ~1. Of, or relating to, the sense of taste.
+HACKNEYED ~1. Repeated too often.
+HALLOWED ~1. Consecrated or sanctified; sacred, holy.
+HAMPER ~1. A large basket, usually with a cover, used for the packing and carrying of articles or small animals. ~2. To impede in motion or progress; to encumber.
+HARANGUE ~1. An impassioned public speech. ~2. A tirade or rant, whether spoken or written. ~3. To give a forceful and lengthy lecture or criticism to someone.
+HARBORED ~1. To hold or persistently entertain in one's thoughts or mind. ~2.  A sheltered expanse of water, adjacent to land, in which ships may dock or anchor.
+HASTEN ~1. To move in a quick fashion. ~2. To make someone speed up or make something happen quicker.
+HAUGHTY ~1. Conveying in demeanor the assumption of superiority; disdainful, supercilious.
+HOARY ~1. White or gray with age. ~2. Remote in time past. of a pale silvery gray. ~3. Old, or old-fashioned.
+HOLISTIC ~1. Relating to a study of a subject as a concrete whole (instead of a separating into distinct parts and studying each individually).
+HUBRIS ~1. Excessive pride, presumption or arrogance (originally toward the gods).

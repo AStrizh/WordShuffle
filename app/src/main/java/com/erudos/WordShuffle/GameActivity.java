@@ -44,8 +44,8 @@ public class GameActivity extends AppCompatActivity {
     private TextView message;
     private Button resetBtn;
 
-    private int points;
-    private int total;
+    //private int points;
+    //private int total;
 
     private PointF[] holeCenters;
     private PointF[] viewStartPositions;
