@@ -160,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(DIFFICULTY, dictType);
                 startActivity(intent);
                 break;
+
             case R.id.hard:
                 intent = new Intent(this, GameActivity.class);
                 dictType = Integer.toString(R.raw.dictionary_hard_temp);

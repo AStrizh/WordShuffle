@@ -12,41 +12,20 @@ class Calculations {
 
     private static final int MIN_DISTANCE = 100;
 
-    //TODO: The two array shuffles need to be converted into one generic shuffle
-    //Kunth shuffle to mix the letters of the word around
-    static String[] shuffle ( String word ) {
+    static   <T> void shuffle ( T[] anArray ) {
 
         Random gen = new Random();
 
-        String[] letters = breakString(word);
-        int n = word.length();
+        int n = anArray.length;
 
         while (n > 1) {
             int k = gen.nextInt(n--);
-            String temp = letters[n];
-            letters[n] = letters[k];
-            letters[k] = temp;
+            T temp = anArray[n];
+            anArray[n] = anArray[k];
+            anArray[k] = temp;
         }
-        return letters;
     }
 
-    //Kunth shuffle to mix an array of points
-    static PointF[] shuffle ( PointF[] positions ) {
-
-        Random gen = new Random();
-
-        int n = positions.length;
-
-
-        while (n > 1) {
-            int k = gen.nextInt(n--);
-            PointF temp = positions[n];
-            positions[n] = positions[k];
-            positions[k] = temp;
-        }
-
-        return positions;
-    }
 
     //Checks if a textView is close (within a minimum acceptable distance) to a target
     static boolean distanceClose( PointF curCent, PointF tarCent ) {

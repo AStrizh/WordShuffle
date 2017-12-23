@@ -173,7 +173,10 @@ public class GameActivity extends AppCompatActivity {
         wordWorking = word;
         Drawable box = ContextCompat.getDrawable(context, R.drawable.box);
 
-        String[] letters = shuffle(wordWorking);
+        //String[] letters = shuffle(wordWorking);
+        String[] letters = breakString(word);
+        shuffle(letters);
+
         wordLength = letters.length;
         int leftMarginView;
 
