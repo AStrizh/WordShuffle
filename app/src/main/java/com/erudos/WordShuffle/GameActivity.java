@@ -166,7 +166,8 @@ public class GameActivity extends AppCompatActivity {
 
         });
     }
-
+    //TODO: Create Custom view classes rather than defining the view here
+    //TODO: Make sure the view Overrides CustomOutline for shadows
     //Creates movable textViews based on the provided word
     private void wordBuilder(String word) {
 
@@ -220,7 +221,7 @@ public class GameActivity extends AppCompatActivity {
 
         }
     }
-
+    //TODO: Create Custom view classes rather than defining the view here
     //Creates static target views  based on the length of the provided word
     private void targetBuilder() {
 
