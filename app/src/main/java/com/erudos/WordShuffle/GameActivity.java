@@ -322,6 +322,8 @@ public class GameActivity extends AppCompatActivity {
                                 view.setX((int)( targetCenter.x - (view.getWidth()/2) ) );
                                 view.setY((int)( targetCenter.y - (view.getHeight()/2)) );
 
+                                view.playSoundEffect(android.view.SoundEffectConstants.CLICK);
+
                                 //Puts the letter from the view into an array for checking later
                                 letterCollection[i] = ( (TextView) view).getText().toString();
                                 letterCount++;
