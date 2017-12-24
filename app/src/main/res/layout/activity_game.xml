@@ -7,18 +7,19 @@
     tools:context="com.erudos.WordShuffle.GameActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/definition"
         android:id="@+id/hint"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp"/>
+
+    <!--
         android:layout_marginTop="200dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:paddingLeft="16dp"/>
-
-    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
