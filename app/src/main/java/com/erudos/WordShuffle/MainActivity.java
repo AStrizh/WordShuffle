@@ -147,7 +147,6 @@ public class MainActivity extends AppCompatActivity {
     public void ButtonOnClick(View v) {
         switch (v.getId()) {
             case R.id.easy:
-                v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
                 Intent intent = new Intent(this, GameActivity.class);
                 String dictType = Integer.toString(R.raw.dictionary_easy_temp);
                 intent.putExtra(DIFFICULTY, dictType);
@@ -156,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
 
             //Commented until more dictionaries available
             case R.id.medium:
-                v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
                 intent = new Intent(this, GameActivity.class);
                 dictType = Integer.toString(R.raw.dictionary_medium_temp);
                 intent.putExtra(DIFFICULTY, dictType);
@@ -164,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.hard:
-                v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
                 intent = new Intent(this, GameActivity.class);
                 dictType = Integer.toString(R.raw.dictionary_hard_temp);
                 intent.putExtra(DIFFICULTY, dictType);

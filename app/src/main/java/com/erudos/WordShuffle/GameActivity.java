@@ -4,13 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -371,8 +375,11 @@ public class GameActivity extends AppCompatActivity {
 
             taskBuilder();
 
-        } else
+        } else{
+            wrongShake();
             message.setText(getString(R.string.incorrect));
+        }
+
     }
 
 
@@ -436,5 +443,15 @@ public class GameActivity extends AppCompatActivity {
             contentView.removeView(v);
 
         taskBuilder();
+    }
+
+    private void wrongShake() {
+        if (Build.VERSION.SDK_INT >= 26) {
+            ((Vibrator) getSystemService(VIBRATOR_SERVICE))
+                    .vibrate(VibrationEffect.createOneShot(
+                    150, VibrationEffect.DEFAULT_AMPLITUDE));
+        } else {
+            ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(150);
+        }
     }
 }
