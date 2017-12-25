@@ -102,7 +102,7 @@ public class GameActivity extends AppCompatActivity {
 
 
         mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId( getString(R.string.interstitial_ad_test));
+        mInterstitialAd.setAdUnitId( getString(R.string.interstitial_ad_unit_id));
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
