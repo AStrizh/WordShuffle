@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
             rowTextView.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
             rowTextView.setTextSize(
                     TypedValue.COMPLEX_UNIT_PX,
-                    getResources().getDimension(R.dimen.size));
+                    getResources().getDimension(R.dimen.letter_size));
 
             rowTextView.setGravity(Gravity.CENTER);
 

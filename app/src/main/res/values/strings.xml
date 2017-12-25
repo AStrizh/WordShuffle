@@ -12,7 +12,7 @@
     <string name="hard">Hard</string>
 
     <string name="standmes">Arrange the letters in the correct sequence</string>
-    <string name="skipped">The last word was </string>
+    <string name="skipped">The last word was</string>
     <string name="correct">That was right! Here is the next word</string>
     <string name="incorrect">That\'s not right Please try again</string>
 

@@ -3,6 +3,7 @@ package com.erudos.WordShuffle;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PointF;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +12,9 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Spannable;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -212,7 +216,8 @@ public class GameActivity extends AppCompatActivity {
             rowTextView.setBackground(box);
             rowTextView.setText(letters[i]);
             rowTextView.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-            rowTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.size));
+            rowTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                    getResources().getDimension(R.dimen.letter_size));
 
             rowTextView.setGravity(Gravity.CENTER);
 
@@ -367,6 +372,8 @@ public class GameActivity extends AppCompatActivity {
 
             message.setText(getString(R.string.correct));
 
+
+
             //This pair removes the all word blocks
             for(View v : myTextViews)
                 contentView.removeView(v);
@@ -433,7 +440,19 @@ public class GameActivity extends AppCompatActivity {
     //Button to allow user to skip word. Shows an interstitial ad.
     private void skip(){
 
-        message.setText(getString(R.string.skipped) + " " + words[0]);
+        message.setText(getString(R.string.skipped) + " " + words[0],
+                TextView.BufferType.SPANNABLE);
+
+        //Defines Text style for Skipped to be Bold Red
+        Spannable s = (Spannable)message.getText();
+        int start = getString(R.string.skipped).length();
+        int end = start + 1 + words[0].length();
+
+        s.setSpan(new StyleSpan(Typeface.BOLD),
+                start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        s.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.Red)),
+                start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
         letterCount = 0;
 
         //This pair removes the all word blocks
