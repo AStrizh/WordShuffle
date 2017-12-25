@@ -58,7 +58,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
         android:text="@string/standmes"
-        android:textSize="@dimen/font_size_medium"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
