@@ -44,9 +44,10 @@ public class GameActivity extends AppCompatActivity {
     private String[] words;
     private Context context;
     private ViewGroup contentView;
-    private InterstitialAd mInterstitialAd;
+    private InterstitialAd interstitialAd;
 
     //private TextView score;
+    private TextView stats;
     private WordShuffle ws;
     private TextView hint;
     private TextView message;
@@ -71,6 +72,8 @@ public class GameActivity extends AppCompatActivity {
 
     private static final int ANIMATION_DURATION = 300;
 
+    private int skipCount;
+    private int correctCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,10 +104,10 @@ public class GameActivity extends AppCompatActivity {
         resetBtn= findViewById(R.id.reset);
 
 
-        mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId( getString(R.string.interstitial_ad_unit_id));
+        interstitialAd = new InterstitialAd(context);
+        interstitialAd.setAdUnitId( getString(R.string.interstitial_ad_unit_id));
 
-        mInterstitialAd.setAdListener(new AdListener() {
+        interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 requestNewInterstitial();
@@ -127,8 +130,8 @@ public class GameActivity extends AppCompatActivity {
         Button skip = findViewById(R.id.skip);
         skip.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
+                if (interstitialAd.isLoaded()) {
+                    interstitialAd.show();
                 } else {
                     skip();
                 }
@@ -137,6 +140,8 @@ public class GameActivity extends AppCompatActivity {
         });
 
         //score = findViewById(R.id.total);
+        stats = findViewById(R.id.stats);
+        stats.setText(String.format( getString(R.string.stats), correctCount, skipCount ));
         message = findViewById(R.id.message);
         hint = findViewById(R.id.hint);
         taskBuilder();
@@ -371,7 +376,7 @@ public class GameActivity extends AppCompatActivity {
             //score.setText("Total: " + total);
 
             message.setText(getString(R.string.correct));
-
+            stats.setText(String.format( getString(R.string.stats), ++correctCount, skipCount ));
 
 
             //This pair removes the all word blocks
@@ -414,7 +419,7 @@ public class GameActivity extends AppCompatActivity {
     //Method to create interstitial ads
     private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder().build();
-        mInterstitialAd.loadAd(adRequest);
+        interstitialAd.loadAd(adRequest);
     }
 
     //Animates the movement of tiles to their start position
@@ -435,10 +440,15 @@ public class GameActivity extends AppCompatActivity {
             myTextViews[j].setX((int)( viewStartPositions[j].x ) );
             myTextViews[j].setY((int)( viewStartPositions[j].y ) );
         }
+        letterCount = 0;
     }
 
     //Button to allow user to skip word. Shows an interstitial ad.
     private void skip(){
+
+        //stats.setText("Total: " + total);
+
+        stats.setText(String.format( getString(R.string.stats), correctCount, ++skipCount ));
 
         message.setText(getString(R.string.skipped) + " " + words[0],
                 TextView.BufferType.SPANNABLE);

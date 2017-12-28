@@ -15,6 +15,7 @@
     <string name="skipped">The last word was</string>
     <string name="correct">That was right! Here is the next word</string>
     <string name="incorrect">That\'s not right Please try again</string>
+    <string name="stats">Correct: %d  \u0020 \u0020 \u0020  Skipped: %d </string>
 
 
 

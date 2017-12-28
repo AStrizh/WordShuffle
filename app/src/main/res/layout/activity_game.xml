@@ -29,7 +29,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-     -->
+   -->
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/bannerAd"
@@ -54,11 +54,24 @@
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/skip"
+        android:layout_above="@+id/stats"
+        android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
         android:text="@string/standmes"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/skip"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/stats"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <!--         android:layout_marginBottom="75dp"
+       -->
 
     <Button
         style="@style/Widget.AppCompat.Button.Small"
@@ -66,7 +79,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/reset"
         android:background="@drawable/reload"
-        android:layout_below="@+id/message"
+        android:layout_below="@+id/stats"
         android:layout_alignEnd="@+id/bannerAd" />
 
 
