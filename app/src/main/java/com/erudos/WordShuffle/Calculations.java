@@ -12,7 +12,7 @@ class Calculations {
 
     private static final int MIN_DISTANCE = 100;
 
-    static   <T> void shuffle ( T[] anArray ) {
+    static  <T> void shuffle ( T[] anArray ) {
 
         Random gen = new Random();
 

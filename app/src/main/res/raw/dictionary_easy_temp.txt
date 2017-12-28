@@ -1743,7 +1743,7 @@ WINE ~1. An alcoholic beverage made by fermenting juice of grapes.
 WING ~1. An appendage of an animal's body that enables it to fly. ~2. Part of an airplane that produces the lift for rising into the air.
 WIPE ~1. To move an object over, maintaining contact, with the intention of removing some substance from the surface. ~2. To erase.
 WIRE ~1. Metal formed into a thin, even thread. ~2. A thread or slender rod of metal, a cable. ~3. A metal conductor that carries electricity.
-WISE ~1. Showing good judgement or the benefit of experience.
+WISE ~1. Showing good judgment or the benefit of experience.
 WITHDRAW ~1. To pull something back, aside, or away.
 WONDER ~1. Something that causes amazement or awe, a marvel. ~2. Something astonishing and seemingly inexplicable.
 WOOD ~1. The substance making up the central part of the trunk and branches of a tree. Used as a material for construction, to manufacture various items, etc. or as fuel.

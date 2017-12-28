@@ -2972,7 +2972,7 @@ WING 1 ~1. An appendage of an animal's body that enables it to fly. ~2. Part of 
 WIPE 1 ~1. To move an object over, maintaining contact, with the intention of removing some substance from the surface. ~2. To erase.
 WIRE 1 ~1. Metal formed into a thin, even thread. ~2. A thread or slender rod of metal, a cable. ~3. A metal conductor that carries electricity.
 WISDOM 4 ~1. The ability to apply relevant knowledge in an insightful way. ~2. The ability to make a decision based on the combination of knowledge, experience, and intuitive understanding.
-WISE 1 ~1. Showing good judgement or the benefit of experience.
+WISE 1 ~1. Showing good judgment or the benefit of experience.
 WITHDRAW 3 ~1. To pull something back, aside, or away.
 WITNESS 4 ~1. Attestation of a fact or event. ~2. One who has a personal knowledge of something. ~3. Someone called to give evidence in a court.
 WONDER 3 ~1. Something that causes amazement or awe, a marvel. ~2. Something astonishing and seemingly inexplicable.
