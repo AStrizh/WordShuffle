@@ -278,7 +278,7 @@ CAVE ~1. A large, naturally-occurring cavity formed underground, or in the face 
 CEILING ~1. The surface that bounds the upper limit of a room. ~2. The upper limit of an object or action. ~3. The highest altitude at which an aircraft may fly.
 CELEBRATE ~1. To honor by rites, by ceremonies of joy and respect, or by refraining from ordinary business. ~2. To engage in joyful activity in appreciation of an event.
 CELL ~1. The basic unit of a living organism, consisting of a quantity of protoplasm surrounded by a membrane, which can synthesize proteins and replicate itself. ~2. A room in a prison or jail for one or more inmates. ~3. A small group of people forming part of a larger organization, often an outlawed one.
-CELSIUS ~1. A temperature scale, originally defined as having the freezing point of water as 0\u2103 and its boiling point as 100\u2103, at standard atmospheric pressure. ~NOTE: It is the standard temperature scale used for most of the world excluding Bahamas, Belize, Palau, the USA, and its territories.
+CELSIUS 3 ~1. A temperature scale, originally defined as having the freezing point of water as 0 degrees and its boiling point as 100 degrees, at standard atmospheric pressure. ~NOTE: It is the standard temperature scale used for most of the world excluding Bahamas, Belize, Palau, the USA, and its territories.
 CENTER ~1. The middle portion of something. ~2. A place where most functions or activity occurs.
 CENTRAL ~1. Being the most important. ~2. Being very important, or key to something.
 CENTURY ~1. A hundred years.
@@ -648,7 +648,7 @@ FACTOR ~1. One of the elements, circumstances, or influences which contribute to
 FACTORY ~1. A building or other place where manufacturing takes place.
 FACULTY ~1. The scholarly staff at colleges or universities, as opposed to the students or support staff. ~2. A division of a university. ~3. An ability, skill, or power.
 FADE ~1. To lose freshness, color, or brightness; to become faint in hue or tint; hence, to be wanting in color.
-FAHRENHEIT ~1. A temperature scale with the freezing point at 32\u2109, boiling point at 212\u2109, and 451\u2109 as the temperature at which books burn. ~NOTE: It is only used in the Bahamas, Belize, Palau, infrequently in Canada (switched in 1975), the USA and its territories.
+FAHRENHEIT 3 ~1. A temperature scale with the freezing point at 32 degrees, boiling point at 212 degrees, and 451 degrees as the temperature at which books burn. ~NOTE: It is only used in the Bahamas, Belize, Palau, infrequently in Canada (switched in 1975), the USA and its territories.
 FAIL ~1. To be unsuccessful. ~2. Not to achieve a stated goal.
 FAILURE ~1. State or condition of not meeting a desirable or intended objective. ~2. Termination of the ability of an item to perform its required function, breakdown.
 FAIR ~1. Morally right; upright, righteous. ~2. A community gathering to celebrate and exhibit local achievements.
@@ -792,7 +792,7 @@ HEALTH ~1. A state of well-being or balance, often physical but sometimes also m
 HEALTHY ~1. Enjoying vigor of body, mind, or spirit. ~2. Beneficial to the body and mind; promotes physical and mental fitness.
 HEAR ~1. To receive information, in the form of sound waves, through the ear.
 HEART ~1. A muscular organ that pumps blood through the body, traditionally thought to be the seat of emotion.
-HEAT ~1. Thermal energy. ~2. A high temperature; temperature well above human ideals (20s\u2103/70s\u2109). ~3. An attribute of a spice that causes a burning sensation in the mouth.
+HEAT 1 ~1. Thermal energy. ~2. A high temperature; temperature well above human ideals (20s celsius /70s fahrenheit). ~3. An attribute of a spice that causes a burning sensation in the mouth.
 HEAVEN ~1. The paradise of the afterlife in certain religions, considered to be the home of the god or gods of those religions, and often the home, or one of various possible homes, of souls of the deceased. ~2. A blissful place or experience. ~3. Poetic reference to the sky or the cosmos.
 HEAVILY ~1. With a great weight. ~2. To a considerable degree, to a great extent.
 HEAVY ~1. Having great weight. ~2. Serious, somber.
