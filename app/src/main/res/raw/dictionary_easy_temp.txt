@@ -1565,7 +1565,7 @@ SWEET ~1. Having a pleasant taste, especially one relating to the basic taste se
 SWIM ~1. To move through the water; to propel oneself in water by natural means.
 SYMBOL ~1. A character or glyph representing an idea, concept, or object. ~2. Any object, typically material, which is meant to represent another (usually abstract) even if there is no meaningful relationship.
 SYMPTOM ~1. A perceived change in some function, sensation or appearance of a person that indicates a disease or disorder, such as fever, headache, or rash.
-SYSTEM ~1. A whole composed of relationships among the members. ~2.  ~3. (mathematics) A set of equations involving the same variables, which are to be solved simultaneously.
+SYSTEM ~1. A whole composed of relationships among the members. ~2. A method or way of organizing or planning. ~3. (mathematics) A set of equations involving the same variables, which are to be solved simultaneously.
 TABLE ~1. An item of furniture with a flat top surface raised above the ground to place things on. ~2. A matrix or grid of data arranged in rows and columns.
 TAKE ~1. To grasp with the hands. ~2. To grab and move to oneself. ~3. To get into one's possession.
 TALENT ~1. A marked natural ability or skill.

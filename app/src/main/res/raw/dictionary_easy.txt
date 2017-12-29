@@ -2698,7 +2698,7 @@ SYMBOL 3 ~1. A character or glyph representing an idea, concept, or object. ~2. 
 SYMPATHY 5 ~1. A feeling of pity or sorrow for the suffering or distress of another; compassion.
 SYMPTOM 3 ~1. A perceived change in some function, sensation or appearance of a person that indicates a disease or disorder, such as fever, headache, or rash.
 SYNDROME 5 ~1. A recognizable pattern of signs, symptoms and/or behaviors. ~2. A group of symptoms.
-SYSTEM 2 ~1. A whole composed of relationships among the members. ~2.  ~3. (mathematics) A set of equations involving the same variables, which are to be solved simultaneously.
+SYSTEM 2 ~1. A whole composed of relationships among the members. ~2. A method or way of organizing or planning. ~3. (mathematics) A set of equations involving the same variables, which are to be solved simultaneously.
 TABLE 2 ~1. An item of furniture with a flat top surface raised above the ground to place things on. ~2. A matrix or grid of data arranged in rows and columns.
 TACKLE 5 ~1. To force a person to the ground with the weight of your own body, usually by jumping on top or slamming your weight into them.
 TACTIC 4 ~1. A maneuver, or action, performed gain an advantage.
