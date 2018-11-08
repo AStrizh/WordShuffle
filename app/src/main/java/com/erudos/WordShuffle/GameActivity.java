@@ -41,14 +41,13 @@ import static com.erudos.WordShuffle.Calculations.*;
 
 public class GameActivity extends AppCompatActivity {
 
-    private String[] words;
     private Context context;
     private ViewGroup contentView;
     private InterstitialAd interstitialAd;
 
     //private TextView score;
     private TextView stats;
-    private WordShuffle ws;
+    private ChallengeCreator cs;
     private TextView hint;
     private TextView message;
     private Button resetBtn;
@@ -94,10 +93,11 @@ public class GameActivity extends AppCompatActivity {
 
         try {
 
-            ws = new WordShuffle(fileResource, context);
+            //ws = new WordShuffle(fileResource, context);
+            cs = new ChallengeCreator(fileResource, context);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            finish();
         }
 
 
@@ -151,15 +151,15 @@ public class GameActivity extends AppCompatActivity {
     //Calls WordShuffle method to select a new word
     private void taskBuilder(){
 
-        words = ws.taskCreator();
-
         //Resets the screen with a new word challenge
         firstLoad = true;
-        wordBuilder(words[0]);
+
+        WordChallenge wc = cs.getNextChallenge();
+        wordWorking = wc.getWord();
+        hint.setText( wc.getDefinitions() );
+
+        wordBuilder();
         targetBuilder();
-
-        hint.setText(words[2]);
-
 
         resetBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -182,13 +182,11 @@ public class GameActivity extends AppCompatActivity {
     //TODO: Create Custom view classes rather than defining the view here
     //TODO: Make sure the view Override CustomOutline for shadows
     //Creates movable textViews based on the provided word
-    private void wordBuilder(String word) {
+    private void wordBuilder() {
 
-        wordWorking = word;
         Drawable box = ContextCompat.getDrawable(context, R.drawable.box);
 
-        //String[] letters = shuffle(wordWorking);
-        String[] letters = breakString(word);
+        String[] letters = breakString(wordWorking);
         shuffle(letters);
 
         wordLength = letters.length;
@@ -450,13 +448,13 @@ public class GameActivity extends AppCompatActivity {
 
         stats.setText(String.format( getString(R.string.stats), correctCount, ++skipCount ));
 
-        message.setText(getString(R.string.skipped) + " " + words[0],
+        message.setText(getString(R.string.skipped) + " " + wordWorking,
                 TextView.BufferType.SPANNABLE);
 
         //Defines Text style for Skipped to be Bold Red
         Spannable s = (Spannable)message.getText();
         int start = getString(R.string.skipped).length();
-        int end = start + 1 + words[0].length();
+        int end = start + 1 + wordWorking.length();
 
         s.setSpan(new StyleSpan(Typeface.BOLD),
                 start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -483,4 +481,5 @@ public class GameActivity extends AppCompatActivity {
             ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(150);
         }
     }
+
 }
