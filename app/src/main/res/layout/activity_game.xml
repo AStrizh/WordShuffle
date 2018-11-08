@@ -70,17 +70,13 @@
         android:text="@string/stats"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <!--         android:layout_marginBottom="75dp"
-       -->
-
     <Button
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/reset"
         android:background="@drawable/reload"
-        android:layout_below="@+id/stats"
-        android:layout_alignEnd="@+id/bannerAd" />
-
+        android:layout_below="@id/stats"
+        android:layout_alignEnd="@id/stats"/>
 
 </RelativeLayout>
