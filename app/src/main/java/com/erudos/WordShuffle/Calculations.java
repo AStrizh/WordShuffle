@@ -102,4 +102,18 @@ class Calculations {
         return true;
     }
 
+    private String stringJoiner( String[] words, String delimiter){
+
+        StringBuilder builder = new StringBuilder();
+        for(int i = 0; i<words.length; i++){
+
+            if( i==words.length-1 )
+                builder.append(words[i]);
+            else
+                builder.append(words[i] + delimiter);
+
+        }
+        return builder.toString();
+    }
+
 }
