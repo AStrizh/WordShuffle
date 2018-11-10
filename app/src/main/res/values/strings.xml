@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Word Shuffle</string>
+
     <string name="word">Word goes here</string>
     <string name="definition">Description of the word goes down here
         \nCan run down here
@@ -23,5 +24,10 @@
     <string name="interstitial_ad_unit_id">ca-app-pub-4666553980283897/6026310707</string>
     <string name="banner_ad_test">ca-app-pub-3940256099942544/6300978111</string>
     <string name="interstitial_ad_test">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--<string name="about_source_licenses">Open source licenses</string>-->
+    <string name="dialog_close">Close</string>
+    <string name="nav_privacy">Privacy Policy</string>
+    <string name="nav_terms">Terms and Conditions</string>
 
 </resources>

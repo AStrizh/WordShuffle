@@ -1,5 +1,6 @@
 package com.erudos.WordShuffle;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
@@ -7,15 +8,22 @@ import android.os.CountDownTimer;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
+import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static com.erudos.WordShuffle.Calculations.*;
 
@@ -29,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
     PointF[] viewStartPositions;
     int wordLength;
 
+    Dialog dialog = null; //new Dialog(this, R.style.DialogFullscreenWithTitle);
+    WebView webView = null; //dialog.findViewById(R.id.web_source_licenses);
+    Button btn_source_licenses_close = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewGroup viewGroup = findViewById(android.R.id.content);
+
+        //Toolbar toolbar = findViewById(R.id.toolbar_main);
+       // setSupportActionBar(toolbar);
 
         DisplayMetrics metrics;
         int widthScreen;
@@ -200,6 +215,50 @@ public class MainActivity extends AppCompatActivity {
             }
         }.start();
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        dialog = new Dialog(this, R.style.DialogFullscreenWithTitle);
+
+        switch (item.getItemId()) {
+            case R.id.action_menu_main_1:
+
+                dialog.setTitle(getString(R.string.nav_privacy));
+                dialog.setContentView(R.layout.dialog_source_licenses);
+                webView = dialog.findViewById(R.id.web_source_licenses);
+                webView.loadUrl("file:///android_asset/privacy_policy.html");
+                break;
+
+            case R.id.action_menu_main_2:
+
+                dialog.setTitle(getString(R.string.nav_terms));
+                dialog.setContentView(R.layout.dialog_source_licenses);
+                webView = dialog.findViewById(R.id.web_source_licenses);
+                webView.loadUrl("file:///android_asset/terms_and_conditions.html");
+                break;
+
+        }
+
+        btn_source_licenses_close = dialog.findViewById(R.id.btn_source_licenses_close);
+        btn_source_licenses_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+
+        return super.onOptionsItemSelected(item);
     }
 
 }
